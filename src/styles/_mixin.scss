@@ -1,3 +1,105 @@
+@mixin block {
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: $block-gradient;
+    box-shadow: $big-shadow;
+    border-radius: 24px;
+    border: 1px solid transparent;
+}
+
+@mixin button {
+    border: none;
+    background: $primary;
+    box-shadow: $out-shadow;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+@mixin button-hover {
+    box-shadow: $in-out-shadow;
+}
+
+@mixin button-rect {
+    min-width: 270px;
+    height: 60px;
+    margin: 5px 0;
+    padding: 18px 55px;
+    color: $text-primary;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+@mixin button-rect-hover {
+    background: $secondary;
+    box-shadow: $color-shadow-dark;
+    color: $white;
+}
+
+@mixin button-rect-color {
+    color: $white;
+    font-weight: 500;
+    text-shadow: $text-shadow;
+    background: $button-color-gradient;
+    box-shadow: $color-shadow;
+    transform: translateY(0);
+}
+
+@mixin button-rect-color-hover {
+    transform: translateY(-5px);
+    box-shadow: $color-shadow-dark;
+}
+
+@mixin button-circle {
+    width: 44px;
+    height: 44px;
+    padding: 10px 12px;
+    color: $text-secodary-light;
+    border-radius: 50%;
+}
+
+@mixin button-circle-hover {
+    background: $secondary;
+    box-shadow: $color-shadow-dark;
+}
+
+//добавить на кнопке спану бэкграуд, а то он просвечивает
+@mixin icon-box {
+    background: $inner-gradient;
+    box-shadow: $inner-dark-shadow;
+    border-radius: 10px;
+    margin-right: 12px;
+    padding: 8px 10px;
+    color: $secondary;
+    font-size: 25px;
+    transition: all .2s linear;
+}
+
+@mixin button-ellipse {
+    background: $inner-gradient;
+    box-shadow: $inner-dark-shadow;
+    border-radius: 24px;
+}
+
+@mixin bullet {
+    background: $radial-gradient;
+    box-shadow: $out-shadow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @mixin breakpoint($bp) {
     @media (max-width: $bp) {
         @content;

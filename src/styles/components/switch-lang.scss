@@ -1,0 +1,36 @@
+.switch {
+    position: relative;
+    background: $inner-gradient;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.6rem;
+    box-shadow: $inner-shadow;
+    cursor: pointer;
+
+    &.active {
+        .switch__button {
+            transform: translateX(0);
+        }
+    }
+
+    &__content {
+        font-size: .8rem;
+        color: $text-secodary-light;
+        padding: 0 .5rem;
+    }
+
+    &__button {
+        position: absolute;
+        transform: translateX(100%);
+        width: 2.3rem;
+        height: 2.3rem;
+        color: $text-secodary;
+        border: none;
+        border-radius: 50%;
+        background: $primary;
+        box-shadow: $big-shadow;
+        cursor: pointer;
+        transition: transform .3s linear;
+    }
+}

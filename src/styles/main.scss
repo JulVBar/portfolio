@@ -2,7 +2,8 @@
 @import "vars";
 @import "mixin";
 @import "settings";
-//@import "zero";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Russo+One&display=swap');
 
 // Ctrl + Alt + X классы SCSS
 // Ctrl + Alt + C классы CSS
@@ -12,10 +13,13 @@
 
 /* Blocks */
 @import "components/header";
+@import "components/nav";
 
+@import "components/switch-lang";
 
-
-
+@import "components/clock";
+@import "components/slider-with-point";
+@import "components/play-button";
 
 
 

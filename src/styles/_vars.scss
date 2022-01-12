@@ -2,21 +2,38 @@ $white:rgb(255, 255, 255);
 $black:rgb(0, 0, 0);
 
 //background
-$primary: rgb(26, 26, 26);
-$secondary:rgb(244, 188, 51);
-$mine-shaft: rgb(42, 42, 42);
+$primary: #E3EDF7;
+$primary-dark: #DEEBF6;
+$secondary:#78C5D6;
+$secondary-dark:#4BBADD;
+
 
 //text
-$color-text:#b6b6b2;
-$alto: rgb(206, 206, 206);
+$text-primary:#123D65;
+$text-secodary:#A0A1AC;
+$text-secodary-light:#B4C0CE;
 
+//gradients
+$button-color-gradient: linear-gradient(
+    89.59deg, $secondary 0.35%, $secondary-dark 99.65%);
+
+$block-gradient: linear-gradient( 135deg, #EBF2F9 19.14%, #C6D7EB 154.68%),
+                 linear-gradient( 160deg, $white 26.33%, rgba(219, 230, 242, 0) 50.71%, #99a9b8 100%);
+
+$radial-gradient: radial-gradient(50% 50% at 50% 50%, $white 0%, #E3EDF7 99.27%);
+
+$radial-gradient-plate: radial-gradient(108.57% 108.57% at -28.57% -24.29%, #B9CCE2 0%, $white 76.56%);
+
+$inner-gradient: linear-gradient(135.44deg, #DAE6F2 13.76%, rgba(225, 234, 245, 0) 122.1%);
+
+$border-gradient: linear-gradient(0deg, $text-secodary -16.72%, $white 24.99%);
 
 //text size
 $text: 15px;
 $small-text: 12px;
 
-$ff-main: 'Open Sans', sans-serif;
-$ff-title: 'Jost', sans-serif;
+$ff-main: 'Montserrat', sans-serif;
+$ff-title: 'Russo One', sans-serif;
 
 //z-index
 $z-index-header:  1000;
@@ -35,8 +52,30 @@ $mini-mobile: 376px;
 
 
 
-$main-shadow:
-    0 80px 80px -20px rgba(154, 156, 165, 0.08),
-    0 30px 24px -10px rgba(154, 156, 165, 0.05),
-    0 12px 10px -6px rgba(154, 156, 165, 0.04),
-    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+//shadows
+$color-shadow: 6px 9px 40px rgba(3, 184, 255, 0.44),
+            -6px -6px 16px rgba(255, 255, 255, 0.6);
+
+$color-shadow-dark: -6px -6px 6px rgba(255, 255, 255, 0.6),
+                    6px 9px 10px rgba(75, 186, 221, 0.44);
+
+$text-shadow: 1px 1px 1px rgba(25, 27, 33, 0.35);
+$text-shadow-big: 15px 15px 30px rgba(17, 15, 38, 0.75);
+
+$big-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
+            16px 4px 64px rgba(18, 61, 101, 0.3),
+            inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+
+$out-shadow: -4px -2px 16px $white, 
+            4px 3px 16px rgba(104, 132, 157, 0.5);
+
+$inner-shadow: inset -3px -3px 7px #FFFFFF, 
+            inset 2px 2px 5px rgba(136, 165, 191, 0.38);
+
+$inner-dark-shadow: inset 2px 2px 5px rgba(105, 141, 173, 0.4), 
+                inset -2px -2px 2px #DEE8F0;
+
+$in-out-shadow: -4px -2px 16px $white, 
+            4px 3px 16px rgba(104, 132, 157, 0.5), 
+            inset -3px -3px 7px $white, 
+            inset 3px 3px 7px rgba(136, 165, 191, 0.48);

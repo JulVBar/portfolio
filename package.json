@@ -15,14 +15,14 @@
   "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JulVBar/nailstudio.git"
+    "url": "git+https://julvbar.github.io/portfolio/"
   },
   "author": "Barankova Iuliia <barankovauv@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JulVBar/nailstudio/issues"
+    "url": "https://julvbar.github.io/portfolio/issues"
   },
-  "homepage": "https://github.com/JulVBar/nailstudio#readme",
+  "homepage": "https://julvbar.github.io/portfolio#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",

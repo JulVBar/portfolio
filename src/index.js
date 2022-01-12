@@ -1,14 +1,16 @@
 
 import './styles/main.scss';
 import one from './js/js1';
+import switchLang from './js/switch-lang';
 
-import two from './js/js2';
+import clock from './js/clock';
 
 console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
     one();
-    two();
+    clock();
+    switchLang();
 });
 
 // load all images

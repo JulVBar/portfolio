@@ -7,7 +7,7 @@ body {
     background-color: $primary;
     font-family: $ff-main;
     font-weight: 400;
-    color: $color-text;
+    color: $text-primary;
     font-size: $text;
 }
 
@@ -59,21 +59,26 @@ img {
     flex-flow: column nowrap;
     // width: 100vw;
     min-height: 100vh;
+
+    background-image: url("./images/homepage-bg.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
     flex: 0 0 100px;
-    background: rgb(125, 209, 125);
+    // background: rgb(125, 209, 125);
 }
 
 footer {
     flex: 0 0 150px;
-    background: rgb(132, 132, 224);
+    // background: rgb(132, 132, 224);
 }
 
 main {
     flex: 1 1 auto;
-    background: rgb(245, 245, 150);
+    // background: rgb(245, 245, 150);
 }
 
 .container {

@@ -1,0 +1,70 @@
+.slider-with-point {
+    margin-top: 2rem;
+    width: 13rem;
+    height: 1rem;
+    box-shadow: $inner-shadow;
+    position: relative;
+    border-radius: 10px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 13rem;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $button-color-gradient;
+        border-radius: 10px;
+
+        animation: widthExpand 5s linear infinite;
+        animation-direction: alternate;
+    }
+
+    &__bullet {
+        position: absolute;
+        z-index: 100;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        top: -0.45rem;
+        left: -0.6rem;
+        background: $primary;
+        box-shadow: $out-shadow;
+
+        animation: moveRight 5s linear infinite;
+        animation-direction: alternate;
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 100;
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        margin: -0.3rem;
+        background: $primary;
+        box-shadow: $inner-shadow;
+        }
+    }
+}
+
+@keyframes widthExpand {
+    0% {
+    width: 0;
+    }
+    100% {
+    width: 100%;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+    transform: translateX(0);
+    }
+
+    100% {
+    transform: translateX(12.8rem);
+    }
+}
