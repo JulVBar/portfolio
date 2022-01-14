@@ -10,6 +10,11 @@
     justify-items: center;
     align-items: center;
 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+
     &__inner {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -25,8 +30,12 @@
     z-index: 300;
     background: $primary;
     box-shadow: $out-shadow;
-    cursor: pointer;
     position: relative;
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
     }
 
     &__back-1, &__back-2 {

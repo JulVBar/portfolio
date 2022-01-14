@@ -1,0 +1,11 @@
+.button {
+    &__color {
+        @include button;
+        @include button-rect;
+        @include button-color;
+
+        &:hover {
+            @include button-color-hover;
+        }
+    }
+}

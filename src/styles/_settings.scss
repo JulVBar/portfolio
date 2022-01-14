@@ -6,9 +6,10 @@ body {
     margin: 0;
     background-color: $primary;
     font-family: $ff-main;
-    font-weight: 400;
+    font-weight: 500;
     color: $text-primary;
     font-size: $text;
+    line-height: 1.5rem;
 }
 
 *,
@@ -51,6 +52,12 @@ img {
 
 .main {
     overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+    
+    &--homepage {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
 }
 
 .page {
@@ -72,19 +79,18 @@ header {
 }
 
 footer {
-    flex: 0 0 150px;
+    flex: 0 0 100px;
     // background: rgb(132, 132, 224);
 }
 
 main {
     flex: 1 1 auto;
-    // background: rgb(245, 245, 150);
 }
 
 .container {
     margin: 0 auto;
     padding: 0 15px;
-    max-width: 1260px;
+    max-width: 1230px;
 }
 
 .is-hidden {

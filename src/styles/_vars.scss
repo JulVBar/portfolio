@@ -7,6 +7,9 @@ $primary-dark: #DEEBF6;
 $secondary:#78C5D6;
 $secondary-dark:#4BBADD;
 
+$secondary-hover:#6cb2c2;
+$secondary-dark-hover:#46aece;
+
 
 //text
 $text-primary:#123D65;
@@ -18,7 +21,7 @@ $button-color-gradient: linear-gradient(
     89.59deg, $secondary 0.35%, $secondary-dark 99.65%);
 
 $block-gradient: linear-gradient( 135deg, #EBF2F9 19.14%, #C6D7EB 154.68%),
-                 linear-gradient( 160deg, $white 26.33%, rgba(219, 230, 242, 0) 50.71%, #99a9b8 100%);
+                linear-gradient( 160deg, $white 26.33%, rgba(219, 230, 242, 0) 50.71%, #99a9b8 100%);
 
 $radial-gradient: radial-gradient(50% 50% at 50% 50%, $white 0%, #E3EDF7 99.27%);
 
@@ -27,6 +30,8 @@ $radial-gradient-plate: radial-gradient(108.57% 108.57% at -28.57% -24.29%, #B9C
 $inner-gradient: linear-gradient(135.44deg, #DAE6F2 13.76%, rgba(225, 234, 245, 0) 122.1%);
 
 $border-gradient: linear-gradient(0deg, $text-secodary -16.72%, $white 24.99%);
+
+$line-gradient: linear-gradient(90deg, rgba(180, 192, 206, 0.48) -65.62%, rgba(180, 192, 206, 0.6) -65.61%, #E6EAF0 50.17%, rgba(180, 192, 206, 0.6) 131.53%);
 
 //text size
 $text: 15px;

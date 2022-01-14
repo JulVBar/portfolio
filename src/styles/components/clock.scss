@@ -1,5 +1,9 @@
 
 .clock {
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
     grid-column: 2 / 3;
     grid-row: 1 / 3;
     width: 8rem;
