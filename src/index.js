@@ -9,7 +9,7 @@ console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
     one();
-    clock();
+    // clock();
     switchLang();
 });
 

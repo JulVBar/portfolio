@@ -17,8 +17,9 @@ $text-secodary:#A0A1AC;
 $text-secodary-light:#B4C0CE;
 
 //gradients
+
 $button-color-gradient: linear-gradient(
-    89.59deg, $secondary 0.35%, $secondary-dark 99.65%);
+89.59deg, $secondary 0.35%, $secondary-dark 99.65%);
 
 $block-gradient: linear-gradient( 135deg, #EBF2F9 19.14%, #C6D7EB 154.68%),
                 linear-gradient( 160deg, $white 26.33%, rgba(219, 230, 242, 0) 50.71%, #99a9b8 100%);

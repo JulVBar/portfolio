@@ -16,7 +16,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_switch_lang__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/switch-lang */ \"./js/switch-lang.js\");\n/* harmony import */ var _js_clock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/clock */ \"./js/clock.js\");\n\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  (0,_js_js1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  (0,_js_clock__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  (0,_js_switch_lang__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_switch_lang__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/switch-lang */ \"./js/switch-lang.js\");\n/* harmony import */ var _js_clock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/clock */ \"./js/clock.js\");\n\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  (0,_js_js1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(); // clock();\n\n  (0,_js_switch_lang__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -53,6 +53,17 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction switchLang() {\n  va
 
 /***/ }),
 
+/***/ "./images/crystal.jpg":
+/*!****************************!*\
+  !*** ./images/crystal.jpg ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/crystal.jpg\");\n\n//# sourceURL=webpack:///./images/crystal.jpg?");
+
+/***/ }),
+
 /***/ "./images/homepage-bg.svg":
 /*!********************************!*\
   !*** ./images/homepage-bg.svg ***!
@@ -64,6 +75,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./images/mramor.jpg":
+/*!***************************!*\
+  !*** ./images/mramor.jpg ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/mramor.jpg\");\n\n//# sourceURL=webpack:///./images/mramor.jpg?");
+
+/***/ }),
+
+/***/ "./images/painting.jpg":
+/*!*****************************!*\
+  !*** ./images/painting.jpg ***!
+  \*****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/painting.jpg\");\n\n//# sourceURL=webpack:///./images/painting.jpg?");
+
+/***/ }),
+
 /***/ "./images/slider/slider.jpg":
 /*!**********************************!*\
   !*** ./images/slider/slider.jpg ***!
@@ -72,17 +105,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/slider/slider.jpg\");\n\n//# sourceURL=webpack:///./images/slider/slider.jpg?");
-
-/***/ }),
-
-/***/ "./images/test.jpg":
-/*!*************************!*\
-  !*** ./images/test.jpg ***!
-  \*************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/test.jpg\");\n\n//# sourceURL=webpack:///./images/test.jpg?");
 
 /***/ }),
 
@@ -124,7 +146,7 @@ eval("var map = {\n\t\"./slider.jpg\": \"./images/slider/slider.jpg\"\n};\n\n\nf
   \**********************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./homepage-bg.svg\": \"./images/homepage-bg.svg\",\n\t\"./test.jpg\": \"./images/test.jpg\",\n\t\"./test.png\": \"./images/test.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
+eval("var map = {\n\t\"./crystal.jpg\": \"./images/crystal.jpg\",\n\t\"./homepage-bg.svg\": \"./images/homepage-bg.svg\",\n\t\"./mramor.jpg\": \"./images/mramor.jpg\",\n\t\"./painting.jpg\": \"./images/painting.jpg\",\n\t\"./test.png\": \"./images/test.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
 
 /***/ })
 

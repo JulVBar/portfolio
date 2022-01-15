@@ -1,0 +1,60 @@
+.circle-progress-bar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: $primary;
+    box-shadow: $inner-shadow;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3rem;
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__circle {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 10;
+        stroke-dasharray: 251.2; // 2 * 3.14 * radius
+        stroke-dashoffset: 251.2; // меньше, если нужен старт круга не с 0
+
+        animation: fill 5s linear infinite;
+        animation-direction: alternate;
+    }
+
+    &__counter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -2rem;
+
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background: $primary;
+        box-shadow: $out-shadow;
+
+        color: $secondary;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}
+
+@keyframes fill {
+    0% {
+        stroke-dashoffset: 251.2; 
+    }
+    100% {
+        stroke-dashoffset: 25; 
+    }
+}
