@@ -1,0 +1,95 @@
+.box-3 {
+    margin-top: 0.1rem;
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        img {
+            display: block;
+        }
+    }
+
+    &__frame {
+        width: 100%;
+        height: 100%;
+        @include block;
+        position: relative;
+    }
+
+    &__orbit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1rem;
+    }
+
+    &__form {
+        position: absolute;
+        top: 20%;
+        right: 30%;
+    }
+
+    &__switch-theme {
+        @include block;
+        padding: 1rem;
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+
+    &__heart-beat {
+        position: absolute;
+        top: 55%;
+        left: 5%;
+    }
+
+    &__middle-frame {
+        position: absolute;
+        top: 7%;
+        right: 10%;
+        width: 10rem;
+        height: 18rem;
+        @include block;
+        padding: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    &__line {
+        width: 8rem;
+        height: 1rem;
+        background: $line-gradient;
+        border-radius: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        display: inline-block;
+        width: 8rem;
+        height: 2rem;
+        padding: 0.3rem;
+        background: $primary;
+        box-shadow: $out-shadow;
+        border: none;
+
+        text-align: center;
+        color: $text-secodary-light;
+        font-size: 0.8rem;
+        border-radius: 0.6rem;
+    }
+
+    &__wave {
+        position: absolute;
+        bottom: 5%;
+        right: 15%;     
+        padding: 1rem 1.5rem;
+        @include block;
+    }
+}
+
+
+

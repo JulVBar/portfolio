@@ -31,12 +31,15 @@
     background: $primary;
     box-shadow: $out-shadow;
     position: relative;
+
+    fill: $secondary;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
-    &__icon {
-        width: 2rem;
-        height: 2rem;
-    }
 
     &__back-1, &__back-2 {
     grid-row: 1 / 2;

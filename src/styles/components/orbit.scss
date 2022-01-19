@@ -1,0 +1,22 @@
+.orbit {
+    &__anchor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        background: $radial-gradient;
+        box-shadow: $out-shadow;
+
+        offset-path: path("M0.230711 0.769289C20.3262 4.64842 72.657 34.0743 90.0028 53.089C107.349 72.104 109.8 86.435 129.825 107.127C149.85 127.82 167.53 128.266 187.617 153.102C207.704 177.938 197.949 201.758 273 282");
+        offset-anchor: 50% 50%;
+        animation: move-along 9000ms infinite alternate ease-in-out;
+    }
+}
+
+@keyframes move-along {
+    100% {
+        offset-distance: 100%;
+    }
+}

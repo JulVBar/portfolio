@@ -2,15 +2,19 @@
 import './styles/main.scss';
 import one from './js/js1';
 import switchLang from './js/switch-lang';
+import iconsSwitch from './js/icons-switch';
 
 import clock from './js/clock';
+import swiperSlider from './js/swiper';
 
 console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
     one();
-    // clock();
+    clock();
     switchLang();
+    swiperSlider();
+    iconsSwitch();
 });
 
 // load all images

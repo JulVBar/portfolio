@@ -5,45 +5,6 @@
         position: absolute;
         right: 2rem;
         bottom: 2rem;
-
-        width: 20rem;
-        height: 20rem;
-        border-radius: 50%;
-        border: dashed 1px $text-secodary-light;
-
-        & div:nth-child(1) {
-            top: 0;
-            right: 2rem;
-        }
-
-        & div:nth-child(2) {
-            top: 50%;
-            transform: translateY(-50%);
-            right: -1.5rem;
-        }
-
-        & div:nth-child(3) {
-            bottom: 0;
-            right: 2rem;
-        }
-    }
-
-    &__icon {
-        position: absolute;
-
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 50%;
-        background: $primary;
-        box-shadow: $out-shadow;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &.active {
-            background: $secondary;
-        }
     }
 
     &__frame {
@@ -64,7 +25,7 @@
 
     &__line {
         background: $line-gradient;
-        border-radius: 24px;
+        border-radius: 1.6rem;
         width: 17rem;
         height: 1.5rem;
 
@@ -73,60 +34,13 @@
         }
     }
 
-    
-    &__photo {
-        position: absolute;
-        border-radius: 10px;
-        opacity: 0.8;
-        box-shadow: $big-shadow;
-
-
-        &--big {
-            width: 6rem;
-            height: 10rem;
-            top: -4%;
-            right: 15%;
-            transform: translateY(0);
-            animation: levitate 3s ease-in-out infinite;
-            animation-direction: alternate;
-        }
-
-        &--middle {
-            width: 7rem;
-            height: 5rem;
-            top: 2%;
-            right: -8%;
-            transform: translateY(0);
-            animation: levitate 2s ease-in-out infinite;
-            animation-direction: alternate;
-        }
-
-        &--small {
-            width: 3rem;
-            height: 5rem;
-            top: 17%;
-            right: 35%;
-            transform: translateY(0);
-            animation: levitate 1s ease-in-out infinite;
-            animation-direction: alternate;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-    }
-
-    &__progress-bar {
+    &__circle-progress-bar {
         position: absolute;
         left: -2rem;
-        top: 5rem;
+        top: 3rem;
         @include block;
         width: 10rem;
-        height: 8rem;
+        height: 10rem;
     }
 
     &__menu {
@@ -147,90 +61,28 @@
         &.active {
             background: $secondary;
             color: $white;
-            border-radius: 24px;
+            border-radius: 1.6rem;
         }
     }
 
     &__mixer {
         position: absolute;
         left: 50%;
-        margin: 0 -7.5rem;
+        transform: translateX(-50%);
         bottom: 1rem;
-        padding: 0 2rem;
-
+        
         @include block;
-        width: 15rem;
+        width: 12rem;
         height: 5rem;
+        padding: 0 2rem;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        & li:nth-child(1)::after {
-            animation-duration: 3s;
-        }
-        & li:nth-child(2)::after {
-            animation-duration: 5s;
-        }
-        & li:nth-child(3)::after {
-            animation-duration: 4.5s;
-        }
-        & li:nth-child(4)::after {
-            animation-duration: 3.5s;
-        }
-        & li:nth-child(5)::after {
-            animation-duration: 4s;
-        }
-        & li:nth-child(6)::after {
-            animation-duration: 2s;
-        }
-    }
-
-    &__mixer-channel {
-        background: $primary;
-        border-radius: 10px;
-        width: 1rem;
-        height: 3rem;
-        box-shadow: $inner-shadow;
-        position: relative;
-
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 10%;
-            border-radius: 10px;
-            background: $button-color-gradient;
-            
-            animation-name: mixer;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
-    }
-
-
-
-
-}
-
-
-
-@keyframes mixer {
-    from {
-        height: 20%;
-    }
-    to {
-        height: 100%;
     }
 }
 
-@keyframes levitate {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(5%);
-    }
-}
+
+
+
+

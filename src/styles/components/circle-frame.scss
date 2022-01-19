@@ -1,0 +1,50 @@
+.circle-frame {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: dashed 1px $text-secodary-light;
+
+    &__icon {
+        position: absolute;
+
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background: $primary;
+        box-shadow: $out-shadow;
+
+        fill: $text-secodary-light;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all .4s linear;
+
+        &.active {
+            background: $secondary;
+            fill: $white;
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    & div:nth-child(1) {
+        top: 0;
+        right: 2rem;
+    }
+
+    & div:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        right: -1.5rem;
+    }
+
+    & div:nth-child(3) {
+        bottom: 0;
+        right: 2rem;
+    }
+}

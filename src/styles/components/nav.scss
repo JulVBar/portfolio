@@ -13,6 +13,10 @@
         cursor: pointer;
         transition: all .2s linear;
 
+        @include breakpoint($mobile) {
+            min-width: 7.5rem;
+        }
+
         &:hover,
         &.active {
             .nav__link:after {

@@ -15,7 +15,6 @@
         width: 16rem;
         height: 30rem;
         @include block;
-
         position: absolute;
     }
 
@@ -46,12 +45,18 @@
         } 
     }
 
+    &__panel {
+        position: absolute;
+        top: 5%;
+        right: 7%;
+    }
+
     &__line {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         background: $line-gradient;
-        border-radius: 24px;
+        border-radius: 0.6rem;
 
         width: 6rem;
         height: 1.5rem;
@@ -88,7 +93,7 @@
         video {
             width: 10rem;
             height: 6rem;
-            opacity: .6;
+            opacity: .5;
             border-radius: 24px;
         }
     }
@@ -99,34 +104,5 @@
         position: absolute;
         bottom: 15%;
         left: -30%;
-    }
-
-    &__panel-list {
-        position: absolute;
-        top: 5%;
-        right: 7%;
-        padding: 0.6rem 0;
-        box-shadow: $color-shadow;
-        border-radius: 10px;
-        background: $button-color-gradient;
-    }
-
-    &__panel-item {
-        &:not(:last-child) {
-            margin: 0.5rem 0;
-        }
-    }
-
-    &__panel-icon {
-        width: 3rem;
-        height: 1.3rem;
-        padding: 0 1rem;
-        border-radius: 24px;
-
-        &.active {
-            background: $block-gradient;
-            box-shadow: $big-shadow;
-            transform: translateX(0.5rem);
-        }
     }
 }

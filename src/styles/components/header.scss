@@ -2,6 +2,11 @@
     display: flex;
     justify-content: right;
 
+    @include breakpoint(1000px) {
+        justify-content: center;
+        align-items: center;
+    }
+
     &__container {
         display: flex;
         margin-top: 3rem;
@@ -10,5 +15,11 @@
         border-radius: 1.6rem;
         background: $primary;
         box-shadow: $out-shadow;
-    }
+
+        @include breakpoint(1000px) {
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+    }   
 }

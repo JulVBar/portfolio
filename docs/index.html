@@ -22,7 +22,7 @@
     <meta name="keywords" content=""> <!-- Need to fill -->
     
     <title>Portfolio</title>
-<script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js.js"></script><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+<script defer="defer" src="vendors-node_modules_babel_polyfill_lib_index_js-node_modules_swiper_swiper_esm_js.js"></script><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 
 <body>
     <div class="page">
@@ -46,7 +46,7 @@
         <main class="main main--homepage">
             <div class="container">
                 <section class="hero">
-                    <div class="hero__column">
+                    <div class="hero__column hero__column--left">
                         <h2 class="hero__subtitle">Баранкова Юлия</h2>
                         <h1 class="hero__title">Frontend Developer</h1>
                         <p class="hero__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo maiores ipsum nemo magni ipsam nam adipisci a fugiat laudantium nulla sit.</p>
@@ -74,66 +74,262 @@
 
 
 
-                    <div class="hero__column">
-                        <div class="hero__slider">
-                            <div class="box-2 box">
+                    <div class="hero__column hero__column--right">
+                        
+
+
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="box__wrap">
+                                            <div class="box-1 box">
+                                                <div class="box-1__bottom-frame">
+                                                    <div class="box-1__dots">
+                                                        <div class="box-1__dots-item"></div>
+                                                        <div class="box-1__dots-item"></div>
+                                                        <div class="box-1__dots-item"></div>
+                                                    </div>
+                                                    
+                                                    <div class="box-1__panel panel">
+                                                        <ul class="panel__list list-reset">
+                                                            <li class="panel__item">
+                                                                <svg><use xlink:href="images/icon/sprite.svg#homepage"></use></svg>
+                                                            </li>
+                                                            <li class="panel__item">
+                                                                <svg><use xlink:href="images/icon/sprite.svg#chat-bubble"></use></svg>
+                                                            </li>
+                                                            <li class="panel__item active">
+                                                                <svg><use xlink:href="images/icon/sprite.svg#settings"></use></svg>
+                                                            </li>
+                                                            <li class="panel__item">
+                                                                <svg><use xlink:href="images/icon/sprite.svg#combo-chart"></use></svg>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                </div>
+                
+                                                <div class="box-1__middle-frame">
+                                                    <div class="clock">
+                                                        <div class="clock__hand clock__hours"></div>
+                                                        <div class="clock__hand clock__minutes"></div>
+                                                        <div class="clock__hand clock__seconds"></div>
+                                                        <div class="clock__point"></div>
+                                                        <div class="clock__marker">
+                                                            <span class="clock__marker-1"></span>
+                                                            <span class="clock__marker-2"></span>
+                                                            <span class="clock__marker-3"></span>
+                                                            <span class="clock__marker-4"></span>
+                                                        </div>
+                                                    </div>
+                                                        
+                                                    <div class="box-1__line box-1__line--left"></div>
+                                                    <div class="box-1__line box-1__line--right"></div>
+                                                    <div class="box-1__line box-1__line--long"></div>
+                
+                                                    <div class="box-1__play-button">
+                                                        <div class="play-button">
+                                                            <span class="play-button__inner">
+                                                                <svg>
+                                                                    <use xlink:href="images/icon/sprite.svg#play"></use>
+                                                                </svg>
+                                                            </span>
+                                                            <span class="play-button__back-1"></span>
+                                                            <span class="play-button__back-2"></span>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="box-1__video">
+                                                        <video controls played muted autoplay="autoplay" loop="loop">
+                                                            <source src="images/icon/Asteroids.mp4" type="video/mp4">
+                                                        </video>
+                                                    </div>
+                
+                                                    <div class="box-1__slider-with-point">
+                                                        <div class="slider-with-point">
+                                                            <div class="slider-with-point__bullet"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="box__wrap">
+                                            <div class="box-2 box">
+                                                <div class="box-2__circle-frame circle-frame">
+                                                    <div class="circle-frame__icon">
+                                                        <svg><use xlink:href="images/icon/sprite.svg#homepage"></use></svg>
+                                                    </div>
+                                                    <div class="circle-frame__icon">
+                                                        <svg><use xlink:href="images/icon/sprite.svg#settings"></use></svg>
+                                                    </div>
+                                                    <div class="circle-frame__icon">
+                                                        <svg><use xlink:href="images/icon/sprite.svg#play"></use></svg>
+                                                    </div>
+                                                </div>
+                                                <div class="box-2__frame">
+                                                    <div class="box-2__lines">
+                                                        <div class="box-2__line"></div>
+                                                        <div class="box-2__line"></div>
+                                                    </div>
+                
+                                                    <div class="small-galery">
+                                                        <div class="small-galery__photo small-galery__photo--big">
+                                                            <img src="images/crystal.jpg" alt="">
+                                                        </div>
+                                                        <div class="small-galery__photo small-galery__photo--middle">
+                                                            <img src="images/mountains.jpg" alt="">
+                                                        </div>
+                                                        <div class="small-galery__photo small-galery__photo--small">
+                                                            <img src="images/eye.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="box-2__circle-progress-bar">
+                                                        <div class="circle-progress-bar">
+                                                            <svg class="circle-progress-bar__svg">
+                                                                <defs>
+                                                                    <radialGradient id="gradient" cx="50%" cy="50%" r="60%" fx="50%" fy="50%">
+                                                                        <stop offset="30%" stop-color="#78C5D6"/>
+                                                                        <stop offset="100%" stop-color="#4BBADD"/>
+                                                                    </radialGradient>
+                                                                </defs>
+                                                                <circle class="circle-progress-bar__circle" cx="48" cy="48" r="40" stroke="url(#gradient)" id="circle"></circle>
+                                                            </svg>
+                                                            <div class="circle-progress-bar__counter">90%</div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <ul class="box-2__menu list-reset">
+                                                        <li class="box-2__link">Home</li>
+                                                        <li class="box-2__link active">Services</li>
+                                                        <li class="box-2__link">Contacts</li>
+                                                    </ul>
+                
+                                                    <div class="box-2__mixer">
+                                                        <ul class="mixer list-reset">
+                                                            <li class="mixer__channel"></li>
+                                                            <li class="mixer__channel"></li>
+                                                            <li class="mixer__channel"></li>
+                                                            <li class="mixer__channel"></li>
+                                                            <li class="mixer__channel"></li>
+                                                            <li class="mixer__channel"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="box__wrap">
+                                            <div class="box-3 box">
+                                                <div class="box-3__frame">
+                                                    <div class="box-3__image">
+                                                        <img src="images/box-2-image.svg" alt="">
+                                                    </div>
+                
+                                                    <div class="box-3__orbit">
+                                                        <div class="orbit">
+                                                            <svg width="274" height="283" viewBox="0 0 274 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M0.230711 0.769289C20.3262 4.64842 72.657 34.0743 90.0028 53.089C107.349 72.104 109.8 86.435 129.825 107.127C149.85 127.82 167.53 128.266 187.617 153.102C207.704 177.938 197.949 201.758 273 282" stroke="#CBD7E6"/>
+                                                            </svg>
+                                                            <div class="orbit__anchor"></div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="box-3__form">
+                                                        <div class="form">
+                                                            <div class="form__input"></div>
+                                                            <div class="form__panel">
+                                                                <div class="form__button"></div>
+                                                                <div class="form__button active"></div>
+                                                                <div class="form__button"></div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                
+                                                    <div class="box-3__switch-theme">
+                                                        <div class="switch-theme">
+                                                            <div class="switch-theme__wrapper">
+                                                                <svg>
+                                                                    <use xlink:href="images/icon/sprite.svg#night"></use>
+                                                                </svg>
+                                                                <div class="switch-theme__anchor">
+                                                                    <svg>
+                                                                        <use xlink:href="images/icon/sprite.svg#day"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="box-3__heart-beat">
+                                                        <div class="heart-beat">
+                                                            <div class="heart-beat__bottom">
+                                                                <div class="heart-beat__icon">
+                                                                    <svg>
+                                                                        <use xlink:href="images/icon/sprite.svg#arrow-right"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <div class="heart-beat__top">
+                                                                <div class="heart-beat__plate">
+                                                                    <svg>
+                                                                        <use xlink:href="images/icon/sprite.svg#heart"></use>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="box-3__middle-frame">
+                                                        <div class="loading-circle">
+                                                            <div class="loading-circle__ring loading-circle__ring-1">
+                                                                <div class="loading-circle__ring loading-circle__ring-2">
+                                                                    <div class="loading-circle__ring loading-circle__ring-3">
+                                                                        <div class="loading-circle__ring loading-circle__ring-4"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="box-3__line"></div>
+                                                        <div class="box-3__line"></div>
+                                                        <button class="box-3__button">Neumorphic UI</button>
+                                                    </div>
+                
+                                                    <div class="box-3__wave">
+                                                        <ul class="wave list-reset">
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                               
                                 
-                                <div class="box-2__circle-frame">
-                                    <div class="box-2__icon active"><img src="images/icon/github-white.svg" alt=""></div>
-                                    <div class="box-2__icon"><img src="images/icon/github.svg" alt=""></div>
-                                    <div class="box-2__icon"><img src="images/icon/github.svg" alt=""></div>
+                                <div class="slider-btn-left">
+                                    <svg><use xlink:href="images/icon/sprite.svg#arrow-left"></use></svg>
                                 </div>
-
-                                <div class="box-2__frame">
-                                    <div class="box-2__lines">
-                                        <div class="box-2__line"></div>
-                                        <div class="box-2__line"></div>
-                                    </div>
-
-                                    <div class="box-2__galery">
-                                        <div class="box-2__photo box-2__photo--big">
-                                            <img src="images/crystal.jpg" alt="">
-                                        </div>
-                                        <div class="box-2__photo box-2__photo--middle">
-                                            <img src="images/mramor.jpg" alt="">
-                                        </div>
-                                        <div class="box-2__photo box-2__photo--small">
-                                            <img src="images/crystal.jpg" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="box-2__progress-bar">
-                                        <div class="circle-progress-bar">
-                                            <svg class="circle-progress-bar__svg">
-                                                <defs>
-                                                    <radialGradient id="gradient" cx="50%" cy="50%" r="60%" fx="50%" fy="50%">
-                                                        <stop offset="30%" stop-color="#78C5D6"/>
-                                                        <stop offset="100%" stop-color="#4BBADD"/>
-                                                    </radialGradient>
-                                                </defs>
-                                                <circle class="circle-progress-bar__circle" cx="48" cy="48" r="40" stroke="url(#gradient)" id="circle"></circle>
-                                            </svg>
-                                            <div class="circle-progress-bar__counter">90%</div>
-                                        </div>
-                                    </div>
-
-                                    <ul class="box-2__menu list-reset">
-                                        <li class="box-2__link">Home</li>
-                                        <li class="box-2__link active">Services</li>
-                                        <li class="box-2__link">Contacts</li>
-                                    </ul>
-
-                                    <ul class="box-2__mixer list-reset">
-                                        <li class="box-2__mixer-channel"></li>
-                                        <li class="box-2__mixer-channel"></li>
-                                        <li class="box-2__mixer-channel"></li>
-                                        <li class="box-2__mixer-channel"></li>
-                                        <li class="box-2__mixer-channel"></li>
-                                        <li class="box-2__mixer-channel"></li>
-                                    </ul>
+                                <div class="slider-btn-right">
+                                    <svg><use xlink:href="images/icon/sprite.svg#arrow-right"></use></svg>
                                 </div>
-
-
+                                <div class="swiper-pagination"></div>
                             </div>
 
 
@@ -142,85 +338,12 @@
 
 
 
+                            
+
 
 
                             
-                            
-
-                            <!-- <div class="box-1 box">
-                                <div class="box-1__bottom-frame">
-                                    <div class="box-1__dots">
-                                        <div class="box-1__dots-item"></div>
-                                        <div class="box-1__dots-item"></div>
-                                        <div class="box-1__dots-item"></div>
-                                    </div>
-                                    <ul class="box-1__icon-list list-reset">
-                                        <li class="box-1__icon-item"></li>
-                                    </ul>
-                                    <ul class="box-1__panel-list list-reset">
-                                        <li class="box-1__panel-item">
-                                            <img src="images/icon/home_page.svg" alt="" class="box-1__panel-icon">
-                                        </li>
-                                        <li class="box-1__panel-item">
-                                            <img src="images/icon/combo_chart.svg" alt="" class="box-1__panel-icon">
-                                        </li>
-                                        <li class="box-1__panel-item">
-                                            <img src="images/icon/settings.svg" alt="" class="box-1__panel-icon active">
-                                        </li>
-                                        <li class="box-1__panel-item">
-                                            <img src="images/icon/chat_bubble.svg" alt="" class="box-1__panel-icon">
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div class="box-1__middle-frame">
-                                    <div class="clock">
-                                        <div class="clock__hand clock__hours"></div>
-                                        <div class="clock__hand clock__minutes"></div>
-                                        <div class="clock__hand clock__seconds"></div>
-                                        <div class="clock__point"></div>
-                                        <div class="clock__marker">
-                                            <span class="clock__marker-1"></span>
-                                            <span class="clock__marker-2"></span>
-                                            <span class="clock__marker-3"></span>
-                                            <span class="clock__marker-4"></span>
-                                        </div>
-                                    </div>
-                                        
-                                    <div class="box-1__line box-1__line--left"></div>
-                                    <div class="box-1__line box-1__line--right"></div>
-                                    <div class="box-1__line box-1__line--long"></div>
-
-                                    <div class="box-1__play-button">
-                                        <div class="play-button">
-                                            <span class="play-button__inner">
-                                                <img class="play-button__icon" src="images/icon/play.svg" alt="">
-                                            </span>
-                                            <span class="play-button__back-1"></span>
-                                            <span class="play-button__back-2"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="box-1__video">
-                                        <video controls played muted autoplay="autoplay" loop="loop">
-                                            <source src="images/icon/video1.mp4" type="video/mp4">
-                                        </video>
-                                    </div>
-
-                                    <div class="box-1__slider-with-point">
-                                        <div class="slider-with-point">
-                                            <div class="slider-with-point__bullet"></div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>  -->
-
-
-
-                            <div class="left">L</div>
-                            <div class="right">R</div>
-                        </div>
+                        
                     </div>
                 </section>
 

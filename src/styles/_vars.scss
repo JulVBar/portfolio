@@ -15,6 +15,7 @@ $secondary-dark-hover:#46aece;
 $text-primary:#123D65;
 $text-secodary:#A0A1AC;
 $text-secodary-light:#B4C0CE;
+$light-grey: #CBD7E6;
 
 //gradients
 
@@ -35,8 +36,8 @@ $border-gradient: linear-gradient(0deg, $text-secodary -16.72%, $white 24.99%);
 $line-gradient: linear-gradient(90deg, rgba(180, 192, 206, 0.48) -65.62%, rgba(180, 192, 206, 0.6) -65.61%, #E6EAF0 50.17%, rgba(180, 192, 206, 0.6) 131.53%);
 
 //text size
-$text: 15px;
-$small-text: 12px;
+$text: 1rem;
+$small-text: 0.75rem;
 
 $ff-main: 'Montserrat', sans-serif;
 $ff-title: 'Russo One', sans-serif;
@@ -68,9 +69,11 @@ $color-shadow-dark: -6px -6px 6px rgba(255, 255, 255, 0.6),
 $text-shadow: 1px 1px 1px rgba(25, 27, 33, 0.35);
 $text-shadow-big: 15px 15px 30px rgba(17, 15, 38, 0.75);
 
-$big-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
-            16px 4px 64px rgba(18, 61, 101, 0.3),
-            inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+
+
+$big-shadow: -16px -16px 20px rgba(255, 255, 255, 0.6),
+12px 4px 34px rgba(18, 61, 101, 0.212),
+inset -8px -6px 80px rgba(255, 255, 255, 0.18);
 
 $out-shadow: -4px -2px 16px $white, 
             4px 3px 16px rgba(104, 132, 157, 0.5);
