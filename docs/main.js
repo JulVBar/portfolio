@@ -16,7 +16,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_switch_lang__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/switch-lang */ \"./js/switch-lang.js\");\n/* harmony import */ var _js_icons_switch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/icons-switch */ \"./js/icons-switch.js\");\n/* harmony import */ var _js_clock__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/clock */ \"./js/clock.js\");\n/* harmony import */ var _js_swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/swiper */ \"./js/swiper.js\");\n\n\n\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  (0,_js_js1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  (0,_js_clock__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n  (0,_js_switch_lang__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  (0,_js_swiper__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n  (0,_js_icons_switch__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_switch_lang__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/switch-lang */ \"./js/switch-lang.js\");\n/* harmony import */ var _js_icons_switch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/icons-switch */ \"./js/icons-switch.js\");\n/* harmony import */ var _js_parallax__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/parallax */ \"./js/parallax.js\");\n/* harmony import */ var _js_clock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/clock */ \"./js/clock.js\");\n/* harmony import */ var _js_swiper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/swiper */ \"./js/swiper.js\");\n\n\n\n\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  if (document.querySelector('.page--home')) {\n    (0,_js_clock__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\n    (0,_js_switch_lang__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n    (0,_js_swiper__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n    (0,_js_icons_switch__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  }\n\n  if (document.querySelector('.page--portfolio')) {\n    (0,_js_swiper__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\n    (0,_js_parallax__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n  }\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -53,6 +53,17 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction one() {}\n\n/* harmo
 
 /***/ }),
 
+/***/ "./js/parallax.js":
+/*!************************!*\
+  !*** ./js/parallax.js ***!
+  \************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction portfolioParallax() {\n  var blocks = document.querySelectorAll('.masonry__block');\n  var moveCoef = 0.1;\n  var screenCenter = window.innerHeight / 2;\n  window.addEventListener('scroll', function () {\n    parallaxBlocks();\n  }); // parallaxBlocks();\n\n  function parallaxBlocks() {\n    var scrollTop = window.scrollY;\n    blocks.forEach(function (element) {\n      //середина экрна + высота контейнера паралакса\n      var startPoint = screenCenter + element.parentNode.offsetHeight; // 861\n\n      var coordinates = element.getBoundingClientRect();\n      var elementTop = coordinates.y + window.pageYOffset; //относительно документа = относительно окна + прокрутка, статич\n\n      if (elementTop <= scrollTop + startPoint) {\n        /* Вычисляем смещение */\n        var move = (coordinates.y - startPoint) * moveCoef;\n        element.style.transform = \"translateY(\".concat(move, \"px)\");\n      }\n    });\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (portfolioParallax);\n\n//# sourceURL=webpack:///./js/parallax.js?");
+
+/***/ }),
+
 /***/ "./js/swiper.js":
 /*!**********************!*\
   !*** ./js/swiper.js ***!
@@ -60,7 +71,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction one() {}\n\n/* harmo
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"../node_modules/swiper/swiper.esm.js\");\n\nswiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Breakpoints, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);\n\nfunction swiperSlider() {\n  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\".mySwiper\", {\n    loop: true,\n    slidesPerView: 1,\n    spaceBetween: 0,\n    centeredSlides: true,\n    navigation: {\n      nextEl: \".slider-btn-right\",\n      prevEl: \".slider-btn-left\"\n    },\n    pagination: {\n      el: \".swiper-pagination\",\n      clickable: true\n    } // autoplay: {\n    //     delay: 3500,\n    //     disableOnInteraction: false,\n    //     pauseOnMouseEnter: true,\n    // },\n    // breakpoints: {\n    //     // when window width is >= 320px\n    //     320: {\n    //         slidesPerView: 1,\n    //     },\n    //     700: {\n    //         slidesPerView: 3,\n    //     },\n    //     1025: {\n    //         slidesPerView: 6,\n    //         }\n    //     }\n\n  });\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (swiperSlider);\n\n//# sourceURL=webpack:///./js/swiper.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"../node_modules/swiper/swiper.esm.js\");\n\nswiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);\n\nfunction swiperSlider() {\n  var swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\".heroSwiper\", {\n    loop: true,\n    slidesPerView: 1,\n    spaceBetween: 0,\n    centeredSlides: true,\n    navigation: {\n      nextEl: \".slider-btn-right\",\n      prevEl: \".slider-btn-left\"\n    },\n    pagination: {\n      el: \".swiper-pagination\",\n      clickable: true\n    },\n    autoplay: {\n      delay: 3500,\n      disableOnInteraction: false,\n      pauseOnMouseEnter: true\n    }\n  });\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (swiperSlider);\n\n//# sourceURL=webpack:///./js/swiper.js?");
 
 /***/ }),
 
@@ -72,6 +83,72 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swip
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\nfunction switchLang() {\n  var switchTrigger = document.querySelector('.switch');\n  var switchButton = document.querySelector('.switch__button');\n  switchTrigger.addEventListener('click', function () {\n    switchTrigger.classList.toggle('active');\n\n    if (switchButton.textContent == \"RU\") {\n      switchButton.textContent = \"EN\";\n    } else {\n      switchButton.textContent = \"RU\";\n    }\n  });\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (switchLang);\n\n//# sourceURL=webpack:///./js/switch-lang.js?");
+
+/***/ }),
+
+/***/ "./images/1.jpg":
+/*!**********************!*\
+  !*** ./images/1.jpg ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/1.jpg\");\n\n//# sourceURL=webpack:///./images/1.jpg?");
+
+/***/ }),
+
+/***/ "./images/2.jpg":
+/*!**********************!*\
+  !*** ./images/2.jpg ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/2.jpg\");\n\n//# sourceURL=webpack:///./images/2.jpg?");
+
+/***/ }),
+
+/***/ "./images/3.jpg":
+/*!**********************!*\
+  !*** ./images/3.jpg ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/3.jpg\");\n\n//# sourceURL=webpack:///./images/3.jpg?");
+
+/***/ }),
+
+/***/ "./images/4.jpg":
+/*!**********************!*\
+  !*** ./images/4.jpg ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/4.jpg\");\n\n//# sourceURL=webpack:///./images/4.jpg?");
+
+/***/ }),
+
+/***/ "./images/5.jpg":
+/*!**********************!*\
+  !*** ./images/5.jpg ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/5.jpg\");\n\n//# sourceURL=webpack:///./images/5.jpg?");
+
+/***/ }),
+
+/***/ "./images/6.jpg":
+/*!**********************!*\
+  !*** ./images/6.jpg ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/6.jpg\");\n\n//# sourceURL=webpack:///./images/6.jpg?");
 
 /***/ }),
 
@@ -141,6 +218,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./images/portfolio-bg.svg":
+/*!*********************************!*\
+  !*** ./images/portfolio-bg.svg ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/portfolio-bg.svg\");\n\n//# sourceURL=webpack:///./images/portfolio-bg.svg?");
+
+/***/ }),
+
 /***/ "./images/slider/slider.jpg":
 /*!**********************************!*\
   !*** ./images/slider/slider.jpg ***!
@@ -179,7 +267,7 @@ eval("var map = {\n\t\"./slider.jpg\": \"./images/slider/slider.jpg\"\n};\n\n\nf
   \**********************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./box-2-image.svg\": \"./images/box-2-image.svg\",\n\t\"./crystal.jpg\": \"./images/crystal.jpg\",\n\t\"./eye.jpg\": \"./images/eye.jpg\",\n\t\"./homepage-bg.svg\": \"./images/homepage-bg.svg\",\n\t\"./mountains.jpg\": \"./images/mountains.jpg\",\n\t\"./orbit.svg\": \"./images/orbit.svg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
+eval("var map = {\n\t\"./1.jpg\": \"./images/1.jpg\",\n\t\"./2.jpg\": \"./images/2.jpg\",\n\t\"./3.jpg\": \"./images/3.jpg\",\n\t\"./4.jpg\": \"./images/4.jpg\",\n\t\"./5.jpg\": \"./images/5.jpg\",\n\t\"./6.jpg\": \"./images/6.jpg\",\n\t\"./box-2-image.svg\": \"./images/box-2-image.svg\",\n\t\"./crystal.jpg\": \"./images/crystal.jpg\",\n\t\"./eye.jpg\": \"./images/eye.jpg\",\n\t\"./homepage-bg.svg\": \"./images/homepage-bg.svg\",\n\t\"./mountains.jpg\": \"./images/mountains.jpg\",\n\t\"./orbit.svg\": \"./images/orbit.svg\",\n\t\"./portfolio-bg.svg\": \"./images/portfolio-bg.svg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
 
 /***/ })
 

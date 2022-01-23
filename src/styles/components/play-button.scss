@@ -52,14 +52,14 @@
     }
 
     &__back-1 {
-    box-shadow: .4rem .4rem .6rem $primary, 
+    box-shadow: .4rem .4rem .6rem $light-grey, 
     -.4rem -.4rem .6rem $white;
-    background: linear-gradient(to bottom right, $primary 0%, $white 100%);
+    background: linear-gradient(to bottom right, $light-grey 0%, $white 100%);
     animation: waves 4s linear infinite;
     }
 
     &__back-2 {
-    box-shadow: .4rem .4rem .6rem $primary, 
+    box-shadow: .4rem .4rem .6rem $primary-dark, 
     -.4rem -.4rem .6rem $white;
     animation: waves 4s linear 2s infinite;
     }

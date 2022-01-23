@@ -1,0 +1,161 @@
+.masonry {
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__wrapper {
+        padding: 3rem 3rem 0 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__text {
+    // background:chocolate;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: -2rem;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    }
+
+    &__block {
+        border-radius: 1.5rem;
+        @include block;
+        box-shadow: $portfolio-shadow;
+        position: relative;
+        cursor: pointer;
+        
+
+        &:hover {
+            .masonry__image img {
+                transform: translateY(4rem);
+            }
+
+            .masonry__title  {
+                opacity: 1;
+            }
+            .masonry__button  {
+                opacity: 1;
+            }       
+        } 
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 1.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: all .3s linear;
+        } 
+    }
+
+    &__title {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 4rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 0.6rem;
+        text-align: center;
+        transition: all .3s linear;
+    }
+
+    &__button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        text-align: center;
+        transition: all .3s linear;
+        @include button;
+        min-width: 10rem;
+        height: 2.5rem;
+        margin: 1rem 0;
+        transition: all .3s linear;
+
+        color: $text-primary;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-radius: 0.6rem;
+
+    }
+}
+
+
+//Large
+.masonry div:nth-child(3n+1) .masonry__block {
+    width: 28rem;
+    height: 16rem;
+    transition: transform 2.5s ease-out;
+    margin-top: 3rem;
+}
+
+//Small
+.masonry div:nth-child(2n) {
+    .masonry__block {
+        width: 18rem;
+        height: 23rem;
+        transition: transform 1.9s ease-in-out;
+
+        &:hover .masonry__image img {
+            transform: translateY(-4rem);
+        }
+    }
+    .masonry__title  {
+        bottom: 0;
+    }
+    .masonry__button  {
+        bottom: 0;
+    }
+}
+
+//Medium
+.masonry div:nth-child(3n) .masonry__block {
+    width: 23rem;
+    height: 18rem;
+    margin-top: 1rem;
+    transition: transform 2.2s ease-out;
+}
+//Small
+.masonry div:nth-child(4n) .masonry__block {
+    width: 18rem;
+    height: 20rem;
+    transition: transform 1.9s ease-in-out;
+}
+
+//Large
+.masonry div:nth-child(6n) .masonry__block {
+    width: 28rem;
+    height: 16rem;
+    margin-bottom: 4rem;
+    transition: transform 2.5s ease-in-out;
+}
+
+//Medium
+.masonry div:nth-child(6n-1) .masonry__block {
+    width: 23rem;
+    height: 17rem;
+    margin-top: 2rem;
+    transition: transform 2.2s ease-out;
+}
+
+// .masonry div:nth-child(odd) .masonry__title {
+//     top: 0;
+// }
+// .masonry div:nth-child(even) .masonry__title {
+//     bottom: 0;
+// }

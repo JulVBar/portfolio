@@ -50,7 +50,6 @@
     background: linear-gradient(
         89.59deg, $secondary-hover 0.35%, $secondary-dark-hover 99.65%);
     color: darken($color: $white, $amount: 5%);
-    box-shadow: $color-shadow-dark;
 }
 
 @mixin button-circle {

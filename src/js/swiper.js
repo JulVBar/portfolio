@@ -1,10 +1,10 @@
 
-import Swiper, { Autoplay, Breakpoints, Pagination, Navigation } from 'swiper';
-Swiper.use([Autoplay, Breakpoints, Navigation, Pagination]);
+import Swiper, { Autoplay, Pagination, Navigation} from 'swiper';
+Swiper.use([Autoplay, Navigation, Pagination]);
 
 function swiperSlider() {   
 
-    var swiper = new Swiper(".mySwiper", {
+    const swiperHero = new Swiper(".heroSwiper", {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
@@ -20,25 +20,12 @@ function swiperSlider() {
             clickable: true,
         },
 
-        // autoplay: {
-        //     delay: 3500,
-        //     disableOnInteraction: false,
-        //     pauseOnMouseEnter: true,
-        // },
-
-        // breakpoints: {
-        //     // when window width is >= 320px
-        //     320: {
-        //         slidesPerView: 1,
-        //     },
-        //     700: {
-        //         slidesPerView: 3,
-        //     },
-        //     1025: {
-        //         slidesPerView: 6,
-        //         }
-        //     }
-        });
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+    });
 }
 
 export default swiperSlider;

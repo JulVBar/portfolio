@@ -1,0 +1,11 @@
+.footer {
+    &__container {
+        @include breakpoint(1000px) {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+    }
+
+
+}

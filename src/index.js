@@ -3,6 +3,8 @@ import './styles/main.scss';
 import one from './js/js1';
 import switchLang from './js/switch-lang';
 import iconsSwitch from './js/icons-switch';
+import portfolioParallax from './js/parallax';
+
 
 import clock from './js/clock';
 import swiperSlider from './js/swiper';
@@ -10,11 +12,19 @@ import swiperSlider from './js/swiper';
 console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
-    one();
-    clock();
-    switchLang();
-    swiperSlider();
-    iconsSwitch();
+
+    if(document.querySelector('.page--home')) {
+        
+        clock();
+        switchLang();
+        swiperSlider();
+        iconsSwitch();
+    }
+    if (document.querySelector('.page--portfolio')) {
+        swiperSlider();
+        portfolioParallax();
+    }
+    
 });
 
 // load all images

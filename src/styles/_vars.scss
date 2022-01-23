@@ -63,8 +63,8 @@ $mini-mobile: 376px;
 $color-shadow: 6px 9px 40px rgba(3, 184, 255, 0.44),
             -6px -6px 16px rgba(255, 255, 255, 0.6);
 
-$color-shadow-dark: -6px -6px 6px rgba(255, 255, 255, 0.6),
-                    6px 9px 10px rgba(75, 186, 221, 0.44);
+// $color-shadow-dark: -6px -6px 6px rgba(255, 255, 255, 0.6),
+//                     6px 9px 10px rgba(75, 186, 221, 0.44);
 
 $text-shadow: 1px 1px 1px rgba(25, 27, 33, 0.35);
 $text-shadow-big: 15px 15px 30px rgba(17, 15, 38, 0.75);
@@ -72,8 +72,12 @@ $text-shadow-big: 15px 15px 30px rgba(17, 15, 38, 0.75);
 
 
 $big-shadow: -16px -16px 20px rgba(255, 255, 255, 0.6),
-12px 4px 34px rgba(18, 61, 101, 0.212),
-inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+    12px 4px 34px rgba(18, 61, 101, 0.212),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+
+$portfolio-shadow: -16px -16px 40px rgba(255, 255, 255, 0.8),
+    16px 4px 64px rgba(18, 61, 101, 0.4),
+    inset -8px -6px 80px rgba(255, 255, 255, 0.18);
 
 $out-shadow: -4px -2px 16px $white, 
             4px 3px 16px rgba(104, 132, 157, 0.5);

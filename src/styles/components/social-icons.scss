@@ -1,0 +1,81 @@
+.social-icons {
+    display: flex;
+
+    &--portfolio {
+        flex-direction: column;
+        padding-left: 2rem;
+        ul {
+            flex-direction: column;
+
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(400px) {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+
+            @include breakpoint(400px) {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+       
+    }
+
+    &__item {
+        width: 3rem;
+        height: 3rem;
+        background: $primary;
+        border-radius: 50%;
+        box-shadow: $out-shadow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .2s ease;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            box-shadow: $in-out-shadow;
+
+            svg {
+                fill: $text-secodary;
+            }
+        }
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            fill: $text-secodary-light;
+            transition: all .2s ease;
+        }
+    }
+}
