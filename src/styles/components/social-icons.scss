@@ -1,9 +1,18 @@
 .social-icons {
     display: flex;
 
-    &--portfolio {
+    &--tablet {
+        display: none !important;
+
+        @include breakpoint($tablet) {
+            display: flex !important;
+        }
+    }
+
+    &--vertical {
         flex-direction: column;
         padding-left: 2rem;
+        
         ul {
             flex-direction: column;
 
@@ -17,6 +26,10 @@
                     margin-bottom: 1rem;
                 }
             }
+        }
+
+        @include breakpoint($tablet) {
+            display: none;
         }
     }
 
@@ -36,8 +49,6 @@
                 margin-bottom: 1rem;
             }
         }
-
-       
     }
 
     &__item {

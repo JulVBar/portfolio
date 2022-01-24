@@ -91,7 +91,7 @@ img {
     width: 6rem;
     height: 100%;    
     background: transparent;
-    padding-top: 7rem;
+    padding-top: 10rem;
 }
 
 .main {
@@ -110,6 +110,11 @@ img {
     &--portfolio {
         padding-left: 6rem;
         padding-top: 6rem;
+
+        @include breakpoint($tablet) {
+            padding-left: 0;
+            padding-top: 1.5rem;
+        }
     }
 }
 
@@ -133,10 +138,6 @@ img {
 
 .footer {
     flex: 0 0 6.25rem;
-
-    &--portfolio {
-        background:rgb(145, 212, 145);
-    }
 }
 
 
