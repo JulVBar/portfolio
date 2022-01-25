@@ -1,4 +1,11 @@
 .footer {
+
+    &--portfolio {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
     &__container {
         @include breakpoint(1000px) {
             display: flex;
@@ -13,5 +20,17 @@
         }
     }
 
-    
+    &__copyright {
+        height: 100%;
+        width: 100%;
+        color: $light-grey;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 0.05rem solid $light-grey;
+        padding: 0.5rem 0;
+        margin-top: 2rem;
+        
+    }
 }

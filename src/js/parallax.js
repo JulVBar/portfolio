@@ -1,7 +1,6 @@
 
 function portfolioParallax() {
     
-    const blocks = document.querySelectorAll('.masonry__block');
     const moveCoef = 0.1;
     let screenCenter = window.innerHeight / 2;
 
@@ -14,6 +13,9 @@ function portfolioParallax() {
 
 
     function parallaxBlocks() {
+        const blocks = document.querySelectorAll('.masonry__block');
+        
+
         let scrollTop = window.scrollY;
 
         blocks .forEach(element => {

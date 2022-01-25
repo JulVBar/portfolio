@@ -21,8 +21,8 @@ window.addEventListener('DOMContentLoaded', function() {
         iconsSwitch();
     }
     if (document.querySelector('.page--portfolio')) {
-        swiperSlider();
         portfolioParallax();
+        one();
     }
     
 });
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function() {
 // load all images
 //каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg|gif)$/));
-const slider = importAll(require.context('./images/slider', false, /\.(png|jpe?g|svg|gif)$/));
+const projects = importAll(require.context('./images/projects', false, /\.(png|jpe?g|svg|gif)$/));
 
 function importAll(r) {
     let images = {};

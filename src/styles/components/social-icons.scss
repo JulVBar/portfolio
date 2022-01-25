@@ -1,6 +1,11 @@
 .social-icons {
     display: flex;
 
+    @include breakpoint(400px) {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
     &--tablet {
         display: none !important;
 
@@ -33,10 +38,18 @@
         }
     }
 
-    @include breakpoint(400px) {
+    &--project {
         flex-direction: column;
-        margin-bottom: 1rem;
+        align-items: center;
+
+        ul {
+            margin-right: 0 !important;
+            margin-bottom: 1rem !important;
+        }
+        
     }
+
+    
 
     &__list {
         display: flex;

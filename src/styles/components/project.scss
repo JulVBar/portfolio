@@ -1,0 +1,303 @@
+.project {
+    display: none;
+    // display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    
+    background: $primary;
+    overflow-y: scroll;
+
+    &.open {
+        display: flex;
+    }
+
+    &__connection {
+        position: fixed;
+        z-index: 1000;
+        top: 10rem;
+        right: -1.2rem;
+        
+        transform: translateX(86%);
+        transition: transform 1s ease;
+
+        &.active {
+            transform: translateX(0);
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 100%;
+        left: -2.5rem;
+        transform: rotate(-90deg);
+        transform-origin: 0 0;
+        margin: 0;
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    &__contacts {
+        @include block;
+        width: 100%;
+        height: 16.875rem;
+        padding: 1rem 3rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__resume-btn {
+        @include button;
+        color: $text-primary;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 0.5rem 2rem;
+        border-radius: 1.5rem;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            box-shadow: $inner-shadow;
+        }
+    }
+
+    &__header {
+        width: 100%;
+        position: fixed;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: $out-shadow;
+        background:$primary;
+    }
+
+    &__name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &__links {
+        display: flex;
+
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            color: $secondary;
+            transition: all .3s linear;
+
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+
+            &:hover {
+                color: $text-primary;
+    
+                svg {
+                    fill: $text-primary;
+                }
+            }
+        }
+
+        svg {
+            width: 1.8rem;
+            height: 1.8rem;
+            padding: 0.25rem;
+            margin-right: 0.8rem;
+            border-radius: 0.6rem;
+            box-shadow: $inner-shadow;
+            fill: $secondary;
+            transition: all .3s linear;
+        }
+    }
+
+    &__close {
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        background: $primary;
+        box-shadow: $out-shadow;
+        transition: all .3s linear;
+        cursor: pointer;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            fill: $text-secodary-light;
+            transition: all .3s linear;
+            pointer-events: none;
+        }
+
+        &:hover {
+            box-shadow: $inner-shadow;
+
+            svg {
+                fill: $secondary;
+            }
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        padding-top: 6rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0;
+
+        @include breakpoint($mini-tablet) {
+            padding: 1.5rem 0;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 30rem;
+        margin-bottom: 4rem;
+        border-radius: 1.5rem;
+        overflow: hidden;
+
+        @include breakpoint($mobile) {
+            margin-bottom: 1rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+    }
+
+    &__content {
+        width: 70%;
+
+        @include breakpoint($mini-tablet) {
+            width: 90%;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint($mobile) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__block {
+        width: 45%;
+        @include block;
+        padding: 2rem;
+        padding-top: 5rem;
+        position: relative;
+
+        &--fullwidth {
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+
+        &:not(:last-child) {
+            @include breakpoint($mobile) {
+                margin-bottom: 5rem;
+            }
+        }
+
+        
+    }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 0.6rem;
+        background: $secondary-opacity;
+        box-shadow: $out-shadow;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            fill: $white;
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            margin: -1.75rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 0.6rem;
+            background: radial-gradient(50% 50% at 50% 50%, $secondary 0%, $secondary-dark 99.27%);
+            box-shadow: $out-shadow;
+        }   
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    &__list {
+        li {
+            position: relative;
+            padding-left: 1rem;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin: -0.25rem 0;
+                left: 0;
+                width: 0.5rem;
+                height: 0.5rem;
+                background: $secondary;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 0.8rem;
+        color: $text-secodary-light;
+        border: 0.01rem solid $text-secodary-light;
+        text-align: center;
+        
+        background:transparent;
+    }
+}
+
