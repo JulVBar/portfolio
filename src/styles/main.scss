@@ -5,11 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Russo+One&display=swap');
 
-// Ctrl + Alt + X классы SCSS
-// Ctrl + Alt + C классы CSS
-
-//прописываем background-image: url("./images/picture.jpg");
-
 
 /* Blocks */
 @import "components/header";
@@ -20,9 +15,12 @@
 @import "components/box-3";
 @import "components/social-icons";
 @import "components/footer";
-
+@import "components/masonry";
+@import "components/categories";
 @import "components/switch-lang";
 @import "components/buttons";
+@import "components/project";
+@import "components/burger";
 
 @import "components/clock";
 @import "components/slider-with-point";
@@ -38,15 +36,8 @@
 @import "components/circle-frame";
 @import "components/small-galery";
 @import "components/mixer";
-@import "components/masonry";
-@import "components/categories";
-@import "components/burger";
-@import "components/project";
 
 @import "components/swiper";
-
-
-
 
 // import Swiper styles
 @import 'swiper/css';

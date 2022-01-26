@@ -1,15 +1,15 @@
 
 import './styles/main.scss';
-import one from './js/js1';
+import createProjects from './js/createProjects';
 import switchLang from './js/switch-lang';
 import iconsSwitch from './js/icons-switch';
 import portfolioParallax from './js/parallax';
+import categories from './js/categories';
 
 
 import clock from './js/clock';
 import swiperSlider from './js/swiper';
 
-console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
 
@@ -22,13 +22,13 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     if (document.querySelector('.page--portfolio')) {
         portfolioParallax();
-        one();
+        categories();
+        createProjects();
     }
     
 });
 
-// load all images
-//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)
+
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg|gif)$/));
 const projects = importAll(require.context('./images/projects', false, /\.(png|jpe?g|svg|gif)$/));
 

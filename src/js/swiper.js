@@ -21,7 +21,7 @@ function swiperSlider() {
         },
 
         autoplay: {
-            delay: 3500,
+            delay: 4500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
