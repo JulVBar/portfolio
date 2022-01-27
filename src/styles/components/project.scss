@@ -3,7 +3,7 @@
 	backface-visibility: hidden;
 
     position: fixed;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     top: 0;
     left: 0;
     z-index: 2000;
@@ -12,22 +12,21 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+
     background: $primary;
+    background-image: url("./images/cloud-bg.svg");
+    background-position: top left;
+    background-repeat: repeat;
+
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s;
 
     &.open {
         visibility: visible;
         overflow-x: hidden;
-
-        .project__inner {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    &__inner {
-        transform: scale(0.7);
-        opacity: 0;
-        transition: all 0.3s;
+        transform: scale(1);
+        opacity: 1;
     }
 
     &__connection {
@@ -42,6 +41,10 @@
         &.active {
             transform: translateX(0);
         }
+
+        @include breakpoint($mini-tablet) {
+            right: -0.2rem;
+        }
     }
 
     &__button {
@@ -52,6 +55,13 @@
         transform-origin: 0 0;
         margin: 0;
         border-radius: 1.5rem 1.5rem 0 0;
+
+        @include breakpoint($mini-tablet) {
+            font-size: 0.8rem;
+            padding: 0.7rem 0;
+            height: auto;
+            left: 0;
+        }
     }
 
     &__contacts {
@@ -82,6 +92,9 @@
     &__header {
         width: 100%;
         position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
         padding: 1rem 0;
         display: flex;
         flex-direction: column;
@@ -93,7 +106,9 @@
     &__name {
         font-size: 1.2rem;
         font-weight: 600;
+        padding: 0 4rem;
         margin-bottom: 1rem;
+        text-align: center;
     }
 
     &__links {
@@ -147,6 +162,10 @@
         transition: all .3s linear;
         cursor: pointer;
 
+        @include breakpoint($mobile) {
+            right: 1rem;
+        }
+
         svg {
             width: 2rem;
             height: 2rem;
@@ -167,6 +186,7 @@
     &__body {
         flex: 1 1 auto;
         padding-top: 6rem;
+        overflow-y: scroll;
     }
 
     &__container {
@@ -177,6 +197,7 @@
 
         @include breakpoint($mini-tablet) {
             padding: 1.5rem 0;
+            padding-top: 3rem;
         }
     }
 
@@ -185,10 +206,13 @@
         height: 30rem;
         margin-bottom: 4rem;
         border-radius: 1.5rem;
-        overflow: hidden;
+
+        @include breakpoint($tablet) {
+            padding: 0 3.5rem;
+        }
 
         @include breakpoint($mobile) {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
 
         img {
@@ -201,6 +225,7 @@
 
     &__content {
         width: 70%;
+        margin-bottom: 2rem;
 
         @include breakpoint($mini-tablet) {
             width: 90%;
@@ -211,7 +236,7 @@
         display: flex;
         justify-content: space-between;
 
-        @include breakpoint($mobile) {
+        @include breakpoint($mini-tablet) {
             flex-direction: column;
             align-items: center;
         }
@@ -224,18 +249,23 @@
         padding-top: 5rem;
         position: relative;
 
+        @include breakpoint($mini-tablet) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         &--fullwidth {
             width: 100%;
             margin-bottom: 5rem;
         }
 
         &:not(:last-child) {
-            @include breakpoint($mobile) {
+            @include breakpoint($mini-tablet) {
                 margin-bottom: 5rem;
             }
         }
-
-        
     }
 
     &__icon {
@@ -307,7 +337,6 @@
         padding: 1rem 0;
         font-size: 0.8rem;
         color: $text-secodary-light;
-        border: 0.01rem solid $text-secodary-light;
         text-align: center;
         
         background:transparent;

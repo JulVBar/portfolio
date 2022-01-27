@@ -65,7 +65,6 @@
     box-shadow: $color-shadow-dark;
 }
 
-//добавить на кнопке спану бэкграуд, а то он просвечивает
 @mixin icon-box {
     background: $inner-gradient;
     box-shadow: $inner-dark-shadow;

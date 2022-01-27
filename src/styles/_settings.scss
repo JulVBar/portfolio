@@ -75,10 +75,9 @@ img {
     }
 
     &--portfolio {
-        background-image: url("./images/portfolio-bg.svg");
-        background-position: top left;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url("./images/cloud-bg.svg");
+        background-position: top;
+        background-repeat: repeat;
     }
 }
 
@@ -144,18 +143,6 @@ img {
     overflow-y: hidden;
 }
 
-
-::-webkit-scrollbar { 
-        
-    background: $inner-gradient;
-    border-radius: 0.6rem;
-    box-shadow: $inner-shadow;
-}
-
-::-webkit-scrollbar-thumb { 
-    border-radius: 1.5rem;
-    background: $text-secodary-light;
-}
 
 .fadeIn {
 	animation-name: fadeIn;

@@ -1,7 +1,7 @@
 'use strict';
 
-let path = require('path'); // для корректной работы с путями
-// подключение плагина
+let path = require('path');
+
 const HTMLWebpackPlugin = require('html-webpack-plugin'); 
 const {CleanWebpackPlugin} = require('clean-webpack-plugin'); 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -13,7 +13,7 @@ const CssMqpackerPlugin = require('css-mqpacker-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
-//возвращает оптимизированный объект
+
 const optimization = () => {
     const config = {
         splitChunks: {
@@ -23,7 +23,7 @@ const optimization = () => {
 
     if (isProd) {
         config.minimizer = [
-            new OptimizeCssAssetsPlugin(), //минимизирует css
+            new OptimizeCssAssetsPlugin(), 
             new TerserPlugin(),
         ];
     }
@@ -36,37 +36,21 @@ module.exports = {
     mode: 'development',
     entry: ['@babel/polyfill', './index.js'],
     output: {
-        filename: '[name].js', //[name] автоматически копируемое имя
-        path: path.resolve(__dirname, 'docs') //docs для github'а deployment
+        filename: '[name].js', 
+        path: path.resolve(__dirname, 'docs') 
     },
     plugins: [
-        new HTMLWebpackPlugin({    //подключаем плагин всегда через new
+        new HTMLWebpackPlugin({ 
                 filename: 'index.html',    
-                template: './index.html', //используем шаблон
+                template: './index.html',
                 minify: {
-                    collapseWhitespace: isProd, //минифицирует html в production, по умолчанию true
-                    removeComments: isProd //удаляет комменты
+                    collapseWhitespace: isProd,
+                    removeComments: isProd 
                 }
         }),
-        new HTMLWebpackPlugin({    // Подключаем каждую страницу отдельно, обязательно указываем filename
+        new HTMLWebpackPlugin({
             filename: 'portfolio.html',
             template: './portfolio.html', 
-            minify: {
-                collapseWhitespace: isProd, 
-                removeComments: isProd 
-            }
-        }),
-        new HTMLWebpackPlugin({    // Подключаем каждую страницу отдельно, обязательно указываем filename
-            filename: 'project.html',
-            template: './project.html', 
-            minify: {
-                collapseWhitespace: isProd, 
-                removeComments: isProd 
-            }
-        }),
-        new HTMLWebpackPlugin({    // Подключаем каждую страницу отдельно, обязательно указываем filename
-            filename: 'resume.html',
-            template: './resume.html', 
             minify: {
                 collapseWhitespace: isProd, 
                 removeComments: isProd 
@@ -75,7 +59,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
-                { //для папки с созданием такой же папки (иначе скопирует только содержимое)
+                {
                     from: path.resolve(__dirname, 'src/images/icon'),
                     to: path.resolve(__dirname, 'docs/images/icon')
                 }
@@ -87,17 +71,13 @@ module.exports = {
     ],
     module: {
         rules: [
-            // {
-            //     test: /\.css$/i,
-            //     use: [MiniCssExtractPlugin.loader, "css-loader"],
-            // },
             {
                 test: /\.s[ac]ss$/i,
                 use: [MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
                         options: {
-                            url: false //иначе не работают background url
+                            url: false, 
                         },
                     },
                     "sass-loader"],

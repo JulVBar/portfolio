@@ -5,8 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Russo+One&display=swap');
 
-
-/* Blocks */
 @import "components/header";
 @import "components/nav";
 @import "components/hero";
@@ -39,12 +37,11 @@
 
 @import "components/swiper";
 
-// import Swiper styles
+
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
-// @import 'swiper/css/grid';
-// @import 'swiper/css/bundle';
+
 
 
 
