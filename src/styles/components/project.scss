@@ -20,7 +20,7 @@
 
     transform: scale(0.7);
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.2s;
 
     &.open {
         visibility: visible;
@@ -113,33 +113,52 @@
 
     &__links {
         display: flex;
+        margin-bottom: 5rem;
 
+        @include breakpoint($mobile) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
         a {
+            @include button;
+            @include button-rect;
             display: flex;
             align-items: center;
-            font-size: 0.8rem;
+            justify-content: left;
+
+            min-width: 15rem;
+            padding: 1.2rem 1rem;
+            font-size: 1rem;
             color: $secondary;
-            transition: all .3s linear;
+            transition: color .3s linear, background-color .3s linear;
+
+            @include breakpoint($mobile) {
+                width: 17rem;
+            }
 
             &:not(:last-child) {
                 margin-right: 4rem;
+
+                @include breakpoint($mobile) {
+                    margin-right: 0 !important;
+                }
             }
 
             &:hover {
-                color: $text-primary;
-    
-                svg {
-                    fill: $text-primary;
-                }
+                color: $primary;
+                background-color: $secondary;
             }
         }
 
         svg {
-            width: 1.8rem;
-            height: 1.8rem;
+            width: 2.3rem;
+            height: 2.3rem;
             padding: 0.25rem;
             margin-right: 0.8rem;
             border-radius: 0.6rem;
+            background: $primary;
             box-shadow: $inner-shadow;
             fill: $secondary;
             transition: all .3s linear;
@@ -204,15 +223,11 @@
     &__image {
         width: 100%;
         height: 30rem;
-        margin-bottom: 4rem;
+        margin-bottom: 1rem;
         border-radius: 1.5rem;
 
         @include breakpoint($tablet) {
             padding: 0 3.5rem;
-        }
-
-        @include breakpoint($mobile) {
-            margin-bottom: 2rem;
         }
 
         img {
@@ -248,12 +263,12 @@
         padding: 2rem;
         padding-top: 5rem;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         @include breakpoint($mini-tablet) {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100% !important;
         }
 
         &--fullwidth {

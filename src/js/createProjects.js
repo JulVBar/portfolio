@@ -4,15 +4,20 @@ function createProjects() {
     
     const masonry = document.querySelector('.masonry');
     const project = document.querySelector('.project');
+    const projectLists = document.querySelectorAll('.project__list');
     const projectContacts = document.querySelector('.project__connection');
     const projectName = document.querySelector('.project__name');
     const projectDep = document.querySelector('.project__deployment');
     const projectGit = document.querySelector('.project__github');
-    const projectPicture = document.querySelector('.project__picture');
+    const projectPicture = document.querySelector('.project__image');
     const projectDescr = document.querySelector('.project__description');
     const projectTech = document.querySelector('.project__tech');
     const projectPlug= document.querySelector('.project__plug');
+
+    const picture = document.createElement('img');
+    picture.classList.add("project__picture");
     let scroll = calcScroll();
+    
 
     masonry.innerHTML = '';
 
@@ -34,19 +39,48 @@ function createProjects() {
             this.plug = plug;
         }
 
-
         openProject() {
             project.classList.add('open');
+            document.querySelector('.project__body').scrollTop = "0";
+
             document.body.classList.add('no-scroll');
             document.body.style.marginRight = `${scroll}px`;
+
             projectName.innerHTML = `${this.name}`;
+            
+            picture.setAttribute('src', `${this.picture}`);
+            picture.setAttribute('alt', `${this.name}`);
+            projectPicture.append(picture);
+            
             projectDescr.innerHTML = `${this.description}`;
-            projectPicture.setAttribute('src', `${this.picture}`);
-            projectPicture.setAttribute('alt', `${this.name}`);
             projectDep.setAttribute('href', `${this.deployment}`);
             projectGit.setAttribute('href', `${this.github}`);
             createList(this.tech, projectTech);
             createList(this.plug, projectPlug);
+
+            if(this.github == "") {
+                projectGit.style.display = "none";
+                projectDep.style.marginRight = "0";
+            } else {
+                projectGit.style.display = "flex";
+                projectDep.style.marginRight = "4rem";
+            }
+
+            if(this.description == "") {
+                projectDescr.parentNode.style.display = "none";
+            } else {
+                projectDescr.parentNode.style.display = "block";
+            }
+
+            if(this.tech == "" || this.plug == "") {
+                projectLists.forEach(item => {
+                    item.parentNode.style.width = "100%";
+                });
+            } else {
+                projectLists.forEach(item => {
+                    item.parentNode.style.width = "45%";
+                });
+            }
         }
 
         render() {
@@ -76,13 +110,18 @@ function createProjects() {
     function createList(array, list) {
         list.innerHTML = '';
 
-        if(array) {
+        if(array && array.length > 0) {
             array.forEach(item => {
                 const element = document.createElement('li');
                 element.innerHTML = `${item}`;
                 list.append(element);
+                list.parentNode.style.display = "flex";
             });
+        } else {
+            list.parentNode.style.display = "none";
         }
+
+        return list;
     }
 
     function closeProject() {
@@ -163,7 +202,7 @@ function createProjects() {
             description: "Многостраничный сайт-каталог фирмы по монтажу и продаже отделочных материалов. Главная страница выполнена как целевая. Адаптирован под все устройства. Каталог более, чем на 2000 товаров. Сайт интегрирован в CMS.",
             deployment: "https://saiding-market.pro/",
             filter: "e-commerce",
-            github: "https://saiding-market.pro/",
+            github: "",
             tech: ["JavaScript", "HTML 5", "CSS 3", "Wordpress"],
             plug: ["Contac Form 7", "Slider Revolution", "WooCommerce", "WPBakery Page Builder"],
         },
