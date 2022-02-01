@@ -43,7 +43,8 @@
 
     &__title {
         font-family: $ff-title;
-        font-size: 2.3rem;
+        font-size: 2.5rem;
+        font-weight: 700;
         line-height: 5rem;
         letter-spacing: 0.2rem;
         margin-bottom: 2rem;
@@ -62,7 +63,8 @@
 
     &__subtitle {
         font-family: $ff-title;
-        font-size: 2rem;
+        font-size: 2.2rem;
+        font-weight: 700;
         line-height: 4rem;
         color: $text-primary;
         letter-spacing: 0.2rem;
