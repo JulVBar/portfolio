@@ -8,6 +8,7 @@ function swiperSlider() {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
+        speed: 600,
         centeredSlides: true,
 
         navigation: {
