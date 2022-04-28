@@ -184,6 +184,18 @@ function createProjects() {
             plug: ["React router", "Formik", "Proptypes", "Classnames", "Yup"],
         },
         {
+            name: "Shop List React JS Application",
+            poster: "images/projects/shoplist-poster.jpg",
+            category: "Веб-приложение",
+            picture: "images/projects/shoplist.png",
+            description: "Приложение для создания списка покупок на React JS. Добавление и удаление товаров, поиск, фильтрация по категориям.",
+            deployment: "https://julvbar.github.io/shop-list-react/",
+            filter: "webapp",
+            github: "https://github.com/JulVBar/shop-list-react",
+            tech: ["React", "React-Dom", "JavaScript", "HTML5", "CSS3", "NPM", "ESLINT", "Webpack", "Git", "Git-pages"],
+            plug: "",
+        },
+        {
             name: "Корпоративный сайт для частной фирмы по эвакуации автомобилей",
             poster: "images/projects/evacuator-poster.jpg",
             category: "Корпоративный сайт",
