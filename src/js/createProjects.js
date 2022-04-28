@@ -171,6 +171,19 @@ function createProjects() {
 
     const projectsAll = [
         {
+            name: "HR Events React JS Application",
+            poster: "images/projects/hrevents-poster.jpg",
+            category: "Веб-приложение",
+            picture: "images/projects/hrevents.png",
+            description: "Приложение для создания эвентов внутри комапании на React JS. Возможность создавать события разных типов для участников, удобный доступ к информации и получение обратной связи. Командная разработка.",
+            deployment: "https://github.com/JulVBar/codeFragmentsHREventApp/tree/main",
+            filter: "webapp",
+            github: "https://github.com/JulVBar/codeFragmentsHREventApp/tree/main",
+            tech: [
+                "React", "JavaScript", "Redux", "Redux Toolkit", "Redux Thunk", "Node JS", "Jest", "Enzyme", "JSON", "AJAX", "HTML5", "SASS", "NPM", "ESLINT", "Bootstrap 4", "Webpack", "Git Lab", "Jira"],
+            plug: ["React router", "Formik", "Proptypes", "Classnames", "Yup"],
+        },
+        {
             name: "Корпоративный сайт для частной фирмы по эвакуации автомобилей",
             poster: "images/projects/evacuator-poster.jpg",
             category: "Корпоративный сайт",
