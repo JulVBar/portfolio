@@ -180,8 +180,21 @@ function createProjects() {
             filter: "webapp",
             github: "https://github.com/JulVBar/codeFragmentsHREventApp/tree/main",
             tech: [
-                "React", "JavaScript", "Redux", "Redux Toolkit", "Redux Thunk", "Node JS", "Jest", "Enzyme", "JSON", "AJAX", "HTML5", "SASS", "NPM", "ESLINT", "Bootstrap 4", "Webpack", "Git Lab", "Jira"],
-            plug: ["React router", "Formik", "Proptypes", "Classnames", "Yup"],
+                "React JS", "JavaScript", "Redux", "Redux Toolkit", "Redux Thunk", "Node JS", "Jest", "Enzyme", "JSON", "AJAX", "HTML5", "SASS", "NPM", "ESLINT", "Bootstrap 4", "Axios", "Core JS", "Webpack", "Git Lab", "Jira", "Jquery"],
+            plug: ["React router", "Formik", "Proptypes", "Classnames", "Yup", "History", "Lodash", "React Widgets", "Moment"],
+        },
+        {
+            name: "Interface Styles React JS Application",
+            poster: "images/projects/interfaceApp-poster.jpg",
+            category: "Веб-приложение",
+            picture: "images/projects/interfaceApp.png",
+            description: "Приложение для подбора цветов и стиля интерфейса для приложений. Можно выбрать уже имеющуюся тему или создать и сохранить свою. Очень удобно при дизайне интерфейсов и сайтов.",
+            deployment: "https://julvbar.github.io/InterfaceApp/",
+            filter: "webapp",
+            github: "https://github.com/JulVBar/InterfaceApp",
+            tech: [
+                "React JS", "JavaScript", "Redux", "Redux Toolkit", "JSON", "HTML5", "SASS", "NPM", "ESLINT", "Webpack", "Git"],
+            plug: ["React DOM", "React Popup", "Styled Components", "Gh pages"],
         },
         {
             name: "Marvel React JS Application",
@@ -193,8 +206,8 @@ function createProjects() {
             filter: "webapp",
             github: "https://github.com/JulVBar/marvelapp",
             tech: [
-                "React", "JavaScript", "HTML5", "SASS", "NPM", "ESLINT", "Webpack", "Git"],
-            plug: ["React router", "Git-pages", "Proptypes"],
+                "React JS", "JavaScript", "HTML5", "SASS", "NPM", "ESLINT", "Webpack", "Git"],
+            plug: ["React DOM", "React router DOM", "Gh pages", "Proptypes"],
         },
         {
             name: "Shop List React JS Application",
@@ -205,8 +218,8 @@ function createProjects() {
             deployment: "https://julvbar.github.io/shop-list-react/",
             filter: "webapp",
             github: "https://github.com/JulVBar/shop-list-react",
-            tech: ["React", "React-Dom", "JavaScript", "HTML5", "CSS3", "NPM", "ESLINT", "Webpack", "Git"],
-            plug: ["Git-pages"],
+            tech: ["React JS", "JavaScript", "HTML5", "CSS3", "NPM", "ESLINT", "Webpack", "Git"],
+            plug: ["React DOM", "Git-pages"],
         },
         {
             name: "Корпоративный сайт студии дизайна ногтей Good Vin",
@@ -269,11 +282,6 @@ function createProjects() {
         {
             name: "Coming Soon...",
             poster: "images/projects/uidesign.jpg",
-            category: "Coming Soon...",
-        },
-        {
-            name: "Coming Soon...",
-            poster: "images/projects/webdesign2.jpg",
             category: "Coming Soon...",
         },
         {
