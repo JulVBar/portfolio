@@ -171,6 +171,19 @@ function createProjects() {
 
     const projectsAll = [
         {
+            name: "Read Books Vue Application",
+            poster: "images/projects/readbooks-poster.jpg",
+            category: "Веб-приложение",
+            picture: "images/projects/readbooks.png",
+            description: "Приложение для чтения книг онлайн на Vue. Основанно на онлайн проекте 'Project Gutenberg'. В приложении осуществлена возможность выбора по категориям, добавления в избранное, поиск по названию и автору, чтение книг онлайн.",
+            deployment: "https://julvbar.github.io/Book-App-Vue/",
+            filter: "webapp",
+            github: "https://github.com/JulVBar/Book-App-Vue",
+            tech: [
+                "Vue", "JavaScript", "VueX", , "Node JS", "Axios", "Ajax", "HTML5", "SASS", "NPM", "Webpack", "Git", "Git Pages", "GitHub"],
+            plug: ["Swiper", "Vue Router", "Project Gutenberg", "ESLINT"],
+        },
+        {
             name: "HR Events React JS Application",
             poster: "images/projects/hrevents-poster.jpg",
             category: "Веб-приложение",
