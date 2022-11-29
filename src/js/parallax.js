@@ -25,5 +25,6 @@ function portfolioParallax() {
             }
         }); 
     }
+
 }
 export default portfolioParallax;

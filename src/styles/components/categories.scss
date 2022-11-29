@@ -79,7 +79,7 @@
         }
     }
     
-    input[id="company"] {
+    input[id="lp"] {
         &:checked {
             & ~ .categories__glider {
                 transform: translateX(200%);
@@ -98,6 +98,18 @@
 
                 @include breakpoint($tablet) {
                     transform: translateY(300%);
+                }
+            }
+        }
+    }
+
+    input[id="mock"] {
+        &:checked {
+            & ~ .categories__glider {
+                transform: translateX(400%);
+
+                @include breakpoint($tablet) {
+                    transform: translateY(400%);
                 }
             }
         }

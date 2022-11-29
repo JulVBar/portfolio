@@ -56,6 +56,22 @@ module.exports = {
                 removeComments: isProd 
             }
         }),
+        new HTMLWebpackPlugin({
+            filename: 'project.html',
+            template: './project.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'project1.html',
+            template: './project1.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
