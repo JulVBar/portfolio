@@ -102,4 +102,8 @@
             }
         }
     }
+    
+    &.start-animation {
+        @include animation-slide-down (0.7s, 0);
+    }
 }

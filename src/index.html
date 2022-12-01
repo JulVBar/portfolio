@@ -8,17 +8,19 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="index, follow">
     <meta name="description" content="portfolio frontend developer"> 
-    <meta name="keywords" content="portfolio web design frontend developer JavaScript site"> 
+    <meta name="keywords" content="portfolio web design frontend developer JavaScript site">
+    
     
     <title>Iuliia Barankova Portfolio</title>
 </head>
 
-<body>
+<body id="body">
     <div class="preloader">
         <div id="loader">
             <div class="bar"></div>
@@ -35,7 +37,7 @@
 
     <div class="page page--home">
         <header class="header">
-            <div class="header__container">
+            <div class="header__container" data-animation >
                 <nav class="nav">
                     <ul class="nav__list list-reset">
                         <li class="nav__item active"><a href="index.html" class="nav__link">Главная</a></li>
@@ -56,14 +58,14 @@
             <div class="container">
                 <section class="hero">
                     <div class="hero__column hero__column--left">
-                        <h2 class="hero__subtitle">Баранкова Юлия</h2>
-                        <div class="mouse-parallax-title">
+                        <h2 class="hero__subtitle" data-animation >Баранкова Юлия</h2>
+                        <div class="mouse-parallax-title hero__title" data-animation>
                             <div class="mouse-parallax-title-1"></div>
                             <div class="mouse-parallax-title-2"></div>
                             <div class="mouse-parallax-title-3"></div>
                             <div class="mouse-parallax-title-4"></div>
                         </div>
-                        <p class="hero__text">Welcome на моей странице! Я - Юлия, frontend-разработчик из Санкт-Петербурга. Пишу сайты и создаю приложения на JavaScript, React, Vue, Angular, разрабатываю прототипы и рисую дизайн-макеты, интегрирую проекты на CMS.</p>
+                        <p class="hero__text" data-animation >Welcome на моей странице! Я - Юлия, frontend-разработчик из Санкт-Петербурга. Пишу сайты и создаю приложения на JavaScript, React, Vue, Angular, разрабатываю прототипы и рисую дизайн-макеты, интегрирую проекты на CMS.</p>
                         <ul class="hero__contacts list-reset">
                             <!-- <li class="hero__link">
                                 <a href="https://github.com/JulVBar" target="blank">
@@ -77,27 +79,27 @@
                                     Iuliia Barankova
                                 </a>
                             </li> -->
-                            <li class="hero__link">
+                            <li class="hero__link" data-animation>
                                 <a href="https://t.me/JulVBar" target="blank">
                                     <svg><use xlink:href="images/icon/sprite.svg#telegram"></use></svg>
                                     Telegram
                                 </a>
                             </li>
-                            <li class="hero__link">
+                            <li class="hero__link" data-animation>
                                 <a href="https://api.whatsapp.com/send?phone=79216517678" target="blank">
                                     <svg><use xlink:href="images/icon/sprite.svg#whatsapp"></use></svg>
                                     Whatsapp
                                 </a>
                             </li>
                         </ul>
-                        <div class="hero__button">
+                        <div class="hero__button" data-animation >
                             <a href="portfolio.html" class="button__color">Портфолио</a>
                         </div>
                         
                     </div>
 
                     <div class="hero__column hero__column--right">
-                            <div class="swiper heroSwiper">
+                            <div class="swiper heroSwiper" data-animation>
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="box__wrap">
@@ -355,7 +357,7 @@
 
         <footer class="footer">
             <div class="container footer__container">
-                <div class="social-icons">
+                <div class="social-icons" data-animation >
                     <ul class="social-icons__list list-reset">
                         <!-- <li class="social-icons__item">
                             <a href="tel:+79216517678" class="social-icons__link" target="blank">
@@ -370,6 +372,11 @@
                         <li class="social-icons__item">
                             <a href="https://t.me/JulVBar" class="social-icons__link" target="blank">
                                 <svg><use xlink:href="images/icon/sprite.svg#telegram"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social-icons__item">
+                            <a href="mailto:barankovauv@gmail.com" class="social-icons__link" target="blank">
+                                <svg><use xlink:href="images/icon/sprite.svg#mail"></use></svg>
                             </a>
                         </li>
                     </ul>
@@ -387,11 +394,6 @@
                         <li class="social-icons__item">
                             <a href="#" class="social-icons__link" target="blank">
                                 <svg><use xlink:href="images/icon/sprite.svg#behance"></use></svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__item">
-                            <a href="mailto:barankovauv@gmail.com" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#mail"></use></svg>
                             </a>
                         </li>
                     </ul>
@@ -416,5 +418,9 @@
             </div>
         </footer>
     </div>
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script> -->
 </body>
 </html>

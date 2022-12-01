@@ -39,13 +39,16 @@
         width: 25rem;
         height: 16rem;
         
-
         &:hover {
             .masonry__title  {
                 opacity: 1;
                 visibility: visible;
             }     
-        } 
+        }
+
+        &.start-animation {
+            @include animation-scale-in (0.7s, 0);
+        }
     }
 
     &__image {

@@ -31,6 +31,9 @@
             align-items: center;
             margin: 0;
         }
+        &.start-animation {
+            @include animation-slide-in-right(0.7s, 1s);
+        }
     }
     
     &__container--portfolio {
@@ -52,6 +55,10 @@
 
         @include breakpoint($tablet) {
             margin-left: 1rem;
+        }
+
+        &.start-animation {
+            @include animation-fade-in (0.7s, 0);
         }
     }
 

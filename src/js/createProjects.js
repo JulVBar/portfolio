@@ -27,7 +27,7 @@ function createProjects() {
             element.setAttribute("data-filter", this.filterId);
 
             element.innerHTML = `
-            <a href=${this.link} class="masonry__block">
+            <a href=${this.link} class="masonry__block" data-animation>
                 <div class="masonry__text">${this.category}</div>
                 <div class="masonry__title">${this.name}</div>
                 <div class="masonry__image">

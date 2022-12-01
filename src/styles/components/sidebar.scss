@@ -1,0 +1,11 @@
+.sidebar {
+    position: fixed;
+    width: 6rem;
+    height: 100%;    
+    background: transparent;
+    padding-top: 10rem;
+
+    &.start-animation {
+        @include animation-slide-in-left (0.7s, 0);
+    }
+}

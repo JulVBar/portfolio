@@ -2,6 +2,7 @@ function preloader() {
     document.body.onload = function() {
         document.body.style.overflow = 'hidden';
         
+        
         setTimeout(function() {
             let preloader = document.querySelector('.preloader');
 
@@ -10,8 +11,10 @@ function preloader() {
                 document.body.style.overflow = '';
                 // document.querySelector('.hero').classList.add('start-animation');
                 // document.querySelector('.algorithm').classList.add('start-animation');
+
+                document.querySelectorAll('[data-animation]').forEach(item=>item.classList.add('start-animation'));
             }
-        }, 0); //$preloader-delay: 1000ms in SCSS
+        }, 200);
     };
     
 }

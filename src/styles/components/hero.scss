@@ -42,22 +42,13 @@
     }
 
     &__title {
-        font-family: $ff-main; 
-        font-size: 2.5rem;
-        font-weight: 700;
-        line-height: 5rem;
-        letter-spacing: 0.2rem;
-        margin-bottom: 2rem;
-
-        background-image: linear-gradient(90deg, $secondary 22%, $secondary-dark 78%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        @include breakpoint(1000px) {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            line-height: 3.5rem;
+        @include breakpoint($mobile) {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        &.start-animation{
+            @include animation-slide-in-left(1s, 0s);
         }
     }
 
@@ -74,6 +65,10 @@
             font-size: 1.8rem;
             line-height: 3rem;
         }
+
+        &.start-animation {
+            @include animation-slide-in-right(1s, 0s);
+        }
     }
 
     &__text {
@@ -84,37 +79,66 @@
             width: 70%;
             text-align: center;
         }
+
+        &.start-animation {
+            @include animation-fade-in(0.5s, 0.5s);
+        }
     }
 
     &__contacts {
         display: flex;
         margin-bottom: 3rem;
+
+        &.animation-slide-up {
+            @include animation-slide-up(0.7s, 0.85s);
+        }
     }
 
-    &__link a {
-        display: flex;
-        align-items: center;
-        font-size: 1rem;
-        color: $text-primary;
-        transition: color .2s linear;
-
-        &:hover {
-            color: $text-secodary-light;
-        }
-
-        svg {
-            width: 2rem;
-            height: 2rem;
-            fill: $text-secodary-light;
-            padding: 0.3rem;
-            box-shadow: $inner-shadow;
-            border-radius: 0.6rem;
-            margin-right: 0.5rem;
+    &__link {
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            color: $text-primary;
+            transition: color .2s linear;
+    
+            &:hover {
+                color: $text-secodary-light;
             }
+    
+            svg {
+                width: 2rem;
+                height: 2rem;
+                fill: $text-secodary-light;
+                padding: 0.3rem;
+                box-shadow: $inner-shadow;
+                border-radius: 0.6rem;
+                margin-right: 0.5rem;
+            }
+        }
+        
+        &:first-child.start-animation {
+            @include animation-scale-out(0.7s, 0.7s);
+        }
+        &:last-child.start-animation {
+            @include animation-scale-out(0.7s, 0.7s);
+        }
     }
 
     &__link:not(:last-child) {
         margin-right: 1rem;
+    }
+
+    &__button {
+        &.start-animation {
+            @include animation-scale-out(0.7s, 0.7s);
+        }
+    }
+    
+    &Swiper {
+        &.start-animation {
+            @include animation-scale-in(0.7s, 0s);
+        }
     }
 }
 
