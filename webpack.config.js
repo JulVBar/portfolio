@@ -65,8 +65,104 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
-            filename: 'project1.html',
-            template: './project1.html', 
+            filename: 'nailstudio.html',
+            template: 'pages/nailstudio.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'readbooks.html',
+            template: 'pages/readbooks.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'interfaceapp.html',
+            template: 'pages/interfaceapp.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'conceptcar.html',
+            template: 'pages/conceptcar.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'hrevents.html',
+            template: 'pages/hrevents.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'evacuator.html',
+            template: 'pages/evacuator.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'creditbank.html',
+            template: 'pages/creditbank.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'ipzone.html',
+            template: 'pages/ipzone.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'makeupstore.html',
+            template: 'pages/makeupstore.html',
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'shoplist.html',
+            template: 'pages/shoplist.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'saidingmarket.html',
+            template: 'pages/saidingmarket.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'roxlab.html',
+            template: 'pages/roxlab.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'portfolioblue.html',
+            template: 'pages/portfolioblue.html', 
             minify: {
                 collapseWhitespace: isProd, 
                 removeComments: isProd 

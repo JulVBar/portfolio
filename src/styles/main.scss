@@ -8,9 +8,6 @@
 @import "components/header";
 @import "components/nav";
 @import "components/hero";
-@import "components/box-1";
-@import "components/box-2";
-@import "components/box-3";
 @import "components/social-icons";
 @import "components/footer";
 @import "components/masonry";
@@ -22,20 +19,23 @@
 @import "components/burger";
 @import "components/preloader";
 
-@import "components/clock";
-@import "components/slider-with-point";
-@import "components/play-button";
-@import "components/circle-progress-bar";
-@import "components/orbit";
-@import "components/switch-theme";
-@import "components/form";
-@import "components/heart-beat";
-@import "components/loading-circle";
-@import "components/wave";
-@import "components/panel";
-@import "components/circle-frame";
-@import "components/small-galery";
-@import "components/mixer";
+@import "components/hero-slider/box-1";
+@import "components/hero-slider/box-2";
+@import "components/hero-slider/box-3";
+@import "components/hero-slider/clock";
+@import "components/hero-slider/slider-with-point";
+@import "components/hero-slider/play-button";
+@import "components/hero-slider/circle-progress-bar";
+@import "components/hero-slider/orbit";
+@import "components/hero-slider/switch-theme";
+@import "components/hero-slider/form";
+@import "components/hero-slider/heart-beat";
+@import "components/hero-slider/loading-circle";
+@import "components/hero-slider/wave";
+@import "components/hero-slider/panel";
+@import "components/hero-slider/circle-frame";
+@import "components/hero-slider/small-galery";
+@import "components/hero-slider/mixer";
 
 @import "components/swiper";
 

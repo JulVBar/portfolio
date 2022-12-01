@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
 
 
-    <link      rel="stylesheet"      href="https://unpkg.com/swiper/swiper-bundle.min.css"    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,35 +43,37 @@
     </div>
 
     <header class="project__header">
-        <a href="portfolio.html" class="project__back button__with-icon--small">
-            <svg><use xlink:href="images/icon/sprite.svg#arrow-left"></use></svg>
-            <span>Назад в портфолио</span>
-        </a>
-        <div class="project__name">Project Name Already Have</div>
-        <a href="#" class="project__next button__with-icon--small">
-            <span>Следующий проект</span>
-            <svg><use xlink:href="images/icon/sprite.svg#arrow-left"></use></svg>
-            
-        </a>
+        <div class="project__name">Project Name Already Have Project Name Already Have</div>
+        <div class="project__header__link__container">
+            <a href="#" class="project__header__link project__header__link--prev">
+                <svg><use xlink:href="images/icon/sprite.svg#arrow-left"></use></svg>
+            </a>
+            <a href="portfolio.html" class="project__header__link project__header__link--portfolio">
+                <svg><use xlink:href="images/icon/sprite.svg#masonry"></use></svg>
+            </a>
+            <a href="index.html" class="project__header__link project__header__link--homepage">
+                <svg><use xlink:href="images/icon/sprite.svg#homepage"></use></svg>
+            </a>
+        </div>
+        <div class="project__header__link__container">
+            <a href="#" class="project__header__link project__header__link--github">
+                <svg><use xlink:href="images/icon/sprite.svg#github"></use></svg>
+            </a>
+            <a href="#" class="project__header__link project__header__link--show">
+                <svg><use xlink:href="images/icon/sprite.svg#eye"></use></svg>
+            </a>
+            <a href="#" class="project__header__link project__header__link--next">
+                <svg><use xlink:href="images/icon/sprite.svg#arrow-right"></use></svg>
+            </a>
+        </div>
     </header>
 
     <main class="project">
-        <div class="project__links">
-            <a href="#" class="project__deploy button__color" target="_blank">Посмотреть проект</a>
-            <a href="#" class="project__repo button__color" target="_blank">
-                <svg><use xlink:href="images/icon/sprite.svg#github"></use></svg>
-            </a>
-        </div>
         <div class="project__connection">
             <button class="project__button button__color" type="button">Заказать проект</button>
             <div class="project__contacts">
                 <div class="social-icons social-icons--project">
                     <ul class="social-icons__list list-reset">
-                        <li class="social-icons__item">
-                            <a href="tel:+79216517678" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#phone"></use></svg>
-                            </a>
-                        </li>
                         <li class="social-icons__item">
                             <a href="https://api.whatsapp.com/send?phone=79216517678" class="social-icons__link" target="blank">
                                 <svg><use xlink:href="images/icon/sprite.svg#whatsapp"></use></svg>
@@ -80,6 +82,11 @@
                         <li class="social-icons__item">
                             <a href="https://t.me/JulVBar" class="social-icons__link" target="blank">
                                 <svg><use xlink:href="images/icon/sprite.svg#telegram"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social-icons__item">
+                            <a href="mailto:barankovauv@gmail.com" class="social-icons__link" target="blank">
+                                <svg><use xlink:href="images/icon/sprite.svg#mail"></use></svg>
                             </a>
                         </li>
                     </ul>
@@ -95,8 +102,8 @@
                             </a>
                         </li>
                         <li class="social-icons__item">
-                            <a href="mailto:barankovauv@gmail.com" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#mail"></use></svg>
+                            <a href="#" class="social-icons__link" target="blank">
+                                <svg><use xlink:href="images/icon/sprite.svg#behance"></use></svg>
                             </a>
                         </li>
                     </ul>
@@ -118,7 +125,6 @@
                         </li>
                     </ul>
                 </div>
-                <a class="project__resume-btn" href="https://julvbar.github.io/Iuliia-Barankova-resume/" target="blank">Открыть Резюме</a>
             </div>
         </div>
         

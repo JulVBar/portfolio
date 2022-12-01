@@ -20,6 +20,10 @@
         margin-top: 18rem;
         font-size: 0.9rem;
         opacity: 0.8;
+        @include breakpoint(600px) {
+            margin-top: 23rem;
+            font-size: 1.5rem;
+        }
     }
 
     &.done {

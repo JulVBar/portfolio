@@ -11,7 +11,7 @@ function preloader() {
                 // document.querySelector('.hero').classList.add('start-animation');
                 // document.querySelector('.algorithm').classList.add('start-animation');
             }
-        }, 1000); //$preloader-delay: 1000ms in SCSS
+        }, 0); //$preloader-delay: 1000ms in SCSS
     };
     
 }
