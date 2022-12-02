@@ -1,0 +1,39 @@
+.showcase {
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        line-height: 2.8rem;
+    }
+    &__text {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 20rem;
+        li {
+            position: relative;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            padding-left: 2.5rem;
+            margin-right: 2rem;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 25px;
+                height: 25px;
+                // background: url("images/projects/books/book_open.svg") no-repeat;
+                background-size: contain;
+                opacity: 1;
+            }
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

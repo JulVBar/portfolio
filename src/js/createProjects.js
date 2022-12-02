@@ -49,7 +49,7 @@ function createProjects() {
         },
         {
             name: "Интернет-магазин натуральной косметики",
-            poster: "images/projects/makeupstore-poster.gif",
+            poster: "images/projects/makeupstore/makeupstore-poster.gif",
             category: "Интернет-магазин",
             link: "makeupstore.html",
             filterId: "e-commerce",
@@ -63,7 +63,7 @@ function createProjects() {
         },
         {
             name: "Приложение для чтения книг на Vue",
-            poster: "images/projects/readbooks-poster.jpg",
+            poster: "images/projects/books/readbooks-poster.jpg",
             category: "Веб-приложение",
             link: "readbooks.html",
             filterId: "webapp",

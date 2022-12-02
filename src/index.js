@@ -15,7 +15,6 @@ import swiperSlider from './js/swiper';
 
 
 window.addEventListener('DOMContentLoaded', function() {
-    // AOS.init();
     preloader();
     contactsBtn();
     btnToTop();
@@ -31,6 +30,10 @@ window.addEventListener('DOMContentLoaded', function() {
         portfolioParallax();
         categories();
         createProjects();
+    }
+
+    if (document.querySelector('[data-aos-init]')) {
+        AOS.init();
     }
     
 });
