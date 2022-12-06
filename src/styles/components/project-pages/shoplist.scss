@@ -1,0 +1,70 @@
+.shoplist {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+
+    color: #67679E;
+    background: linear-gradient(89.47deg, #79D6F4 -14.85%, #F7D0E5 110.42%);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+
+    &__hero {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        padding: 0 3rem;
+        padding-top: 8rem;
+        margin-bottom: 3rem;
+        background: linear-gradient(to right, #79D6F4 50%, #F7D0E5 50%);
+        @include breakpoint($tablet) {
+            padding-top: 10rem;
+        }
+    }
+
+    &__description,
+    &__skills {
+        display: flex;
+        justify-content: center;
+        @include breakpoint($mini-tablet) {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        div {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include breakpoint($mini-tablet) {
+                width: 90%;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 100%;
+            align-items: left;
+            
+            li {
+                display: flex;
+                &:after {
+                    background: url("images/projects/shoplist/cubes.svg") no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+    &__description {
+        margin-bottom: 2rem;
+    }
+
+}

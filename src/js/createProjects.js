@@ -27,7 +27,7 @@ function createProjects() {
             element.setAttribute("data-filter", this.filterId);
 
             element.innerHTML = `
-            <a href=${this.link} class="masonry__block" data-animation>
+            <a href=${this.link} class="masonry__block">
                 <div class="masonry__text">${this.category}</div>
                 <div class="masonry__title">${this.name}</div>
                 <div class="masonry__image">
@@ -42,7 +42,7 @@ function createProjects() {
     const projectsAll = [
         {
             name: "Концепт автомобиля будущего Mercedes",
-            poster: "images/projects/conceptcar-poster.jpg",
+            poster: "images/projects/conceptcar/conceptcar-poster.jpg",
             category: "Landing Page",
             link: "conceptcar.html",
             filterId: "lp",
@@ -56,7 +56,7 @@ function createProjects() {
         },
         {
             name: "Ip-zone Angular Application",
-            poster: "images/projects/ipzone-poster.jpg",
+            poster: "images/projects/ipzone/ipzone-poster.jpg",
             category: "Веб-приложение",
             link: "ipzone.html",
             filterId: "webapp",
@@ -70,63 +70,63 @@ function createProjects() {
         },
         {
             name: "HR Events React JS Application",
-            poster: "images/projects/hrevents-poster.jpg",
+            poster: "images/projects/hrevents/hrevents-poster.jpg",
             category: "Веб-приложение",
             link: "hrevents.html",
             filterId: "webapp",
         },
         {
             name: "Приложения для подбор тем интерфейса на React",
-            poster: "images/projects/interfaceapp-poster.gif",
+            poster: "images/projects/interfaceapp/interfaceapp-poster.gif",
             category: "Веб-приложение",
             link: "interfaceapp.html",
             filterId: "webapp",
         },
         {
             name: "Лэндинг для студии дизайна ногтей Good Vin",
-            poster: "images/projects/nail-poster.gif",
+            poster: "images/projects/nailstudio/nail-poster.gif",
             category: "Landing Page",
             link: "nailstudio.html",
             filterId: "lp",
         },
         {
             name: "Многостраничный сайт для частной фирмы по эвакуации автомобилей",
-            poster: "images/projects/evacuator-poster.jpg",
+            poster: "images/projects/evacuator/evacuator-poster.jpg",
             category: "Landing Page",
             link: "evacuator.html",
             filterId: "lp",
         },
         {
             name: "Интернет-магазин по продаже фасадных материалов и услуг",
-            poster: "images/projects/saiding-poster.jpg",
+            poster: "images/projects/saiding/saiding-poster.jpg",
             category: "Интернет-магазин",
             link: "saidingmarket.html",
             filterId: "e-commerce",
         },
         {
             name: "Shop List React JS Application",
-            poster: "images/projects/shoplist-poster.jpg",
+            poster: "images/projects/shoplist/shoplist-poster.jpg",
             category: "Веб-приложение",
             link: "shoplist.html",
             filterId: "webapp",
         },
         {
             name: "Макет для веб студии",
-            poster: "images/projects/roxlab-poster.jpg",
+            poster: "images/projects/layout/roxlab-poster.jpg",
             category: "Landing Page",
             link: "roxlab.html",
             filterId: "lp",
         },
         {
             name: "Макет портфолио веб-дизайнера",
-            poster: "images/projects/portfolioblue-poster.jpg",
+            poster: "images/projects/layout/portfolioblue-poster.jpg",
             category: "Landing Page",
             link: "portfolioblue.html",
             filterId: "lp",
         },
         {
             name: "Coming Soon...",
-            poster: "images/projects/comingsoon.jpg",
+            poster: "images/projects/layout/comingsoon.jpg",
             category: "Coming Soon...",
             filterId: "all",
         },

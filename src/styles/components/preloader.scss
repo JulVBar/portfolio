@@ -50,7 +50,7 @@
     position: absolute;
     animation: jump 1s ease infinite;
     -webkit-animation: jump 1s ease infinite;
-    border-radius: 2px;
+    border-radius: 20px;
     background: linear-gradient(to bottom, transparent, rgba(0,0,0,.1));
 }
 .bar:nth-child(1) { left: 0; }

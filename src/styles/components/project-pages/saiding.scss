@@ -1,0 +1,98 @@
+.saiding {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+
+    color: #848787;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+
+    padding-bottom: 3rem;
+
+    h2 {
+        background: linear-gradient(89.89deg, #FF464B 2.37%, #FF8F4A 98.04%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__hero {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        padding: 3rem;
+        padding-top: 8rem;
+        background: url('images/projects/saiding/bg.jpg') no-repeat;
+        background-size: 100% 80%;
+        background-attachment: fixed;
+        @include breakpoint($tablet) {
+            padding-top: 10rem;
+        }
+        img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+            display: block;
+            @include breakpoint($tablet) {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__description,
+    &__skills {
+        width: 80%;
+        display: flex;
+        padding: 2rem 4rem;
+        @include breakpoint($mini-tablet) {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 1.5rem;
+        }
+        div {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include breakpoint($mini-tablet) {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+        p {
+            padding: 0 3rem;
+            text-align: center;
+            @include breakpoint($mini-tablet) {
+                padding: 0.5rem 0rem;
+                width: 100%;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-height: 100%;
+            align-items: left;
+            
+            li {
+                display: flex;
+                &:after {
+                    background: linear-gradient(89.89deg, #FF464B 2.37%, #FF8F4A 98.04%);
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

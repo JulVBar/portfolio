@@ -1,0 +1,193 @@
+.evacuator {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+
+    color: $white;
+    background: #2F2729;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+    
+    h2 {
+        background: linear-gradient(0deg, #EC6C1F 29.87%, #F5AE43 83.77%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    @include breakpoint($tablet) {
+        padding-top: 10rem;
+    }
+
+    &__hero {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        width: 100vw;
+        height: 100%;
+        top: 8rem;
+        &__image {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 8rem;
+            border-radius: 2rem;
+
+            @include breakpoint($tablet) {
+                width: 95%;
+                height: 95%;
+                padding: 3rem;
+            }
+
+            background: rgba(56, 53, 53, 0.4);
+            box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.125);
+            img {
+                display: block;
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                border-radius: 2rem;
+                border: 3px solid #F5AE43;
+            }
+            
+        }
+    }
+
+    &__description {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-top: 12rem;
+        background: url("images/projects/evacuator/road.jpg") no-repeat;
+        background-size: cover;
+
+        background-attachment: fixed;
+        overflow: hidden;
+
+        @include breakpoint(1300px) {
+            flex-direction: column;
+            padding-bottom: 3rem;
+        }
+
+        &__content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            @include breakpoint(1300px) {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        &__image {
+            width: 50%;
+            position: relative;
+            left: 5%;
+            @include breakpoint(1300px) {
+                left: 0%;
+                width: 100%;
+            }
+        }
+        &__text {
+            width: 80%;
+            margin-bottom: 3rem;
+        }
+        &__skills {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include breakpoint(1300px) {
+                margin-bottom: 3rem;
+            }
+            ul {
+                @include breakpoint(1300px) {
+                    max-height: 100%;
+                    text-align: left;
+                }
+                li {
+                    @include breakpoint(1300px) {
+                        max-height: 100%;
+                    }
+                    &:after {
+                        background: linear-gradient(0deg, #EC6C1F 29.87%, #F5AE43 83.77%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blobs {
+    position: absolute;
+    width: 34rem;
+    height: 100%;
+    right: 0;
+    top: 20%;
+    @include breakpoint($mini-tablet) {
+        top: -10%;
+        right: -10%;
+    }
+    @include breakpoint($mobile) {
+        display: none;
+    }
+    &--right {
+        left: 0rem;
+        top: 0;
+        @include breakpoint($mini-tablet) {
+            top: -10%;
+            right: -10%;
+        }
+    }
+}
+.blob {
+    position: absolute;
+    left: 3rem;
+    top: -10rem;
+    z-index: -1;
+    
+    svg {
+        transform-origin: 50% 50%;
+        animation: move 24s ease-in-out infinite;
+        opacity: 0.6;
+        filter: blur(40px);
+    }
+    &-one {
+        top: -5rem;
+        left: -3rem;
+        svg {
+            fill: #F5AE43;
+            width: 25rem;
+        }
+    }
+    &-two {
+        right: -7rem;
+        svg {
+            fill: #EC6C1F;
+            width: 30rem;
+            
+        }
+    }
+    &-three {
+        svg {
+            fill: #2F2729;
+        }
+    }
+}
+
+@keyframes move {
+    0%   { transform: scale(1)   translate(0, 0) rotate(0);}
+    25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg);}
+    50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg);}
+    75%  { transform: scale(0.8) translate(5vw, 10h) rotate(55deg);}
+    100% { transform: scale(1)   translate(0, 0) rotate(0);}
+}

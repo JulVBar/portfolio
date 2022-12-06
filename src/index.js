@@ -35,13 +35,13 @@ window.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('[data-aos-init]')) {
         AOS.init();
     }
-    
 });
 
 
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg|gif)$/));
 const projects = importAll(require.context('./images/projects', false, /\.(png|jpe?g|svg|gif)$/));
 const nailstudio = importAll(require.context('./images/projects/nailstudio', false, /\.(png|jpe?g|svg|gif)$/));
+const interfaceapp = importAll(require.context('./images/projects/interfaceapp', false, /\.(png|jpe?g|svg|gif)$/));
 const books = importAll(require.context('./images/projects/books', false, /\.(png|jpe?g|svg|gif)$/));
 const ipzone = importAll(require.context('./images/projects/ipzone', false, /\.(png|jpe?g|svg|gif)$/));
 const evacuator = importAll(require.context('./images/projects/evacuator', false, /\.(png|jpe?g|svg|gif)$/));
@@ -50,6 +50,7 @@ const saiding = importAll(require.context('./images/projects/saiding', false, /\
 const conceptcar = importAll(require.context('./images/projects/conceptcar', false, /\.(png|jpe?g|svg|gif)$/));
 const hrevents = importAll(require.context('./images/projects/hrevents', false, /\.(png|jpe?g|svg|gif)$/));
 const shoplist = importAll(require.context('./images/projects/shoplist', false, /\.(png|jpe?g|svg|gif)$/));
+const layout = importAll(require.context('./images/projects/layout', false, /\.(png|jpe?g|svg|gif)$/));
 const creditbank = importAll(require.context('./images/projects/creditbank', false, /\.(png|jpe?g|svg|gif)$/));
 
 

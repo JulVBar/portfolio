@@ -22,12 +22,12 @@
 }
 
 @mixin button-rect {
-    min-width: 16.875rem;
-    height: 3.75rem;
+    min-width: 12rem;
+    // height: 3rem;
     margin: 0.3rem 0 2.5rem 0;
-    padding: 1.1rem 3.44px;
+    padding: 0.7rem 1rem;
     color: $text-primary;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     border-radius: 0.6rem;
 }
 

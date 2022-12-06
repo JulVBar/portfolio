@@ -18,7 +18,6 @@
         
         &:not(:last-child) {
             padding-right: 1rem;
-
             @include breakpoint(1000px) {
                 padding-right: 0;
             }
@@ -26,7 +25,6 @@
 
         &--right {
             width: 55%;
-
             @include breakpoint(1000px) {
                 width: 100%;
             }
@@ -34,7 +32,6 @@
 
         &--left {
             width: 45%;
-
             @include breakpoint(1000px) {
                 width: 100%;
             }
@@ -42,6 +39,7 @@
     }
 
     &__title {
+        max-width: 90%;
         @include breakpoint($mobile) {
             max-width: 100%;
             display: flex;
@@ -54,7 +52,7 @@
 
     &__subtitle {
         font-family: $ff-main;
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: 700;
         line-height: 4rem;
         color: $text-primary;
@@ -62,7 +60,7 @@
 
         @include breakpoint(1000px) {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             line-height: 3rem;
         }
 
@@ -72,7 +70,7 @@
     }
 
     &__text {
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-bottom: 2rem;
 
         @include breakpoint(1000px) {
