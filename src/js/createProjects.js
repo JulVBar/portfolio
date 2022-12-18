@@ -41,6 +41,13 @@ function createProjects() {
 
     const projectsAll = [
         {
+            name: "Landing Page компании быстрых займов",
+            poster: "images/projects/creditbank/creditbank-poster.png",
+            category: "Landing Page",
+            link: "creditbank.html",
+            filterId: "lp",
+        },
+        {
             name: "Концепт автомобиля будущего Mercedes",
             poster: "images/projects/conceptcar/conceptcar-poster.jpg",
             category: "Landing Page",

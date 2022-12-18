@@ -3,8 +3,10 @@
 @import "mixin";
 @import "settings";
 @import "animation";
+@import "fonts";
 
 @import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;600;700&display=swap');
+
 
 @import "components/header";
 @import "components/nav";
@@ -53,8 +55,4 @@
 @import "components/project-pages/evacuator";
 @import "components/project-pages/shoplist";
 @import "components/project-pages/saiding";
-
-
-
-
-
+@import "components/project-pages/creditbank";

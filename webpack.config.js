@@ -238,6 +238,17 @@ module.exports = {
                         },
                     },
                     ]
+            },
+            {
+                test: /\.(woff|woff2|ttf|otf|eot)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                        },
+                    }
+                    ]
             }
         ]
     },

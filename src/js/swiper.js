@@ -1,6 +1,6 @@
 
-import Swiper, { Autoplay, Pagination, Navigation} from 'swiper';
-Swiper.use([Autoplay, Navigation, Pagination]);
+import Swiper, { Autoplay, Pagination, Navigation, Mousewheel} from 'swiper';
+Swiper.use([Autoplay, Navigation, Pagination, Mousewheel]);
 
 function swiperSlider() {   
 

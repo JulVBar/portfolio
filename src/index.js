@@ -12,6 +12,7 @@ import btnToTop from './js/btn-to-top';
 
 import clock from './js/clock';
 import swiperSlider from './js/swiper';
+// import multiSwiper from './js/multiSwiper';
 
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -35,8 +36,13 @@ window.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('[data-aos-init]')) {
         AOS.init();
     }
+    // if (document.querySelector('#creditbank')) {
+    //     multiSwiper();
+    // }
 });
 
+
+const fonts = importAll(require.context('./fonts', false, /\.(woff|woff2|ttf|otf|eot)$/));
 
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg|gif)$/));
 const projects = importAll(require.context('./images/projects', false, /\.(png|jpe?g|svg|gif)$/));
