@@ -5,16 +5,11 @@ html {
     @include breakpoint($mini-desk) {
         font-size: 14px;
     }
-
-    @include breakpoint($mobile) {
-        font-size: 11px;
-        //34rem экран
-    }
 }
 
 body {
     margin: 0;
-    background-color: $primary;
+    background-color: $primary-dark;
     font-family: $ff-main;
     font-weight: 500;
     color: $text-primary;
@@ -60,45 +55,14 @@ img {
     padding: 0;
 }
 
-
-.page {
-    overflow: hidden;
-    display: flex;
-    flex-flow: column nowrap;
-    // width: 100vw;
-    min-height: 100vh;
-
-    &--home {
-        background-image: url("./images/homepage-bg.svg");
-        background-position: top left;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    &--portfolio {
-        background-image: url("./images/cloud-bg.svg");
-        background-position: top;
-        background-repeat: repeat;
-    }
-}
-
-.header {
-    flex: 0 0 6.25rem;
-}
-
 .main {
     flex: 1 1 auto;
-
     &--homepage {
-        display: flex;
-        align-items: center;
-        height: 100%;
-
-        @include breakpoint(1000px) {
-            display: block;
+        padding-top: 3rem;
+        @include breakpoint($tablet) {
+            padding-top: 1rem;
         }
     }
-
     &--portfolio {
         padding-left: 6rem;
         padding-top: 6rem;
@@ -109,6 +73,42 @@ img {
         }
     }
 }
+.page {
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 100vw;
+    height: 100%;
+
+    &--home {
+        background-image: url("./images/homepage-bg.svg");
+        background-position: top right;
+        background-repeat: no-repeat;
+        // background-size: fill;
+        @include breakpoint($mini-desk) {
+            background-position-y: -4rem;
+            background-position-x: 95%;
+            
+        }
+        @include breakpoint($tablet) {
+            background-position-x: center;
+        }
+    }
+    &--portfolio {
+        background-image: url("./images/cloud-bg.svg");
+        background-position: top;
+        background-repeat: repeat;
+    }
+}
+.portfolio__body {
+    background: $primary;
+}
+
+.header {
+    flex: 0 0 6.25rem;
+}
+
+
 
 .container {
     margin: 0 auto;

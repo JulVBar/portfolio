@@ -12,7 +12,7 @@
         padding: 1rem 0;
     }
 
-    @include breakpoint(1000px) {
+    @include breakpoint($tablet) {
         justify-content: center;
         align-items: center;
     }
@@ -26,13 +26,13 @@
         background: $primary;
         box-shadow: $out-shadow;
 
-        @include breakpoint(1000px) {
+        @include breakpoint($tablet) {
             justify-content: center;
             align-items: center;
             margin: 0;
         }
         &.start-animation {
-            @include animation-slide-in-right(0.7s, 1s);
+            @include animation-slide-down(0.5s, 0.5s);
         }
     }
     

@@ -1,5 +1,8 @@
 // animation-play-state: running;
 // animation-play-state: paused;
+.animation-wrapper {
+    overflow: hidden;
+}
 
 @keyframes fadeIn {
     0% {
@@ -18,11 +21,11 @@
 
 @keyframes slide-in-left {
     0% {
-        transform: translateX(-10%);
+        transform: translateX(-5%);
         opacity: 0;
     }
     80% {
-        transform: translateX(10%);
+        transform: translateX(5%);
         opacity: 1;
     }
     100% {
@@ -32,7 +35,7 @@
 }
 
 @mixin animation-slide-in-left ($duration, $delay) {
-    transform: translateX(-10%);
+    transform: translateX(-5%);
     opacity: 0;
     animation: slide-in-left $duration ease-in-out forwards;
     animation-delay: $delay;
@@ -40,11 +43,11 @@
 
 @keyframes slide-in-right {
     0% {
-        transform: translateX(10%);
+        transform: translateX(5%);
         opacity: 0;
     }
     80% {
-        transform: translateX(-10%);
+        transform: translateX(-5%);
         opacity: 1;
     }
     100% {
@@ -54,7 +57,7 @@
 }
 
 @mixin animation-slide-in-right ($duration, $delay) {
-    transform: translateX(10%);
+    transform: translateX(5%);
     opacity: 0;
     animation: slide-in-right $duration ease-in-out forwards;
     animation-delay: $delay;
@@ -62,12 +65,8 @@
 
 @keyframes slide-down {
     0% {
-        transform: translateY(-120%);
+        transform: translateY(-20%);
         opacity: 0;
-    }
-    80% {
-        transform: translateY(20%);
-        opacity: 1;
     }
     100% {
         transform: translateY(0);
@@ -76,7 +75,7 @@
 }
 
 @mixin animation-slide-down ($duration, $delay) {
-    transform: translateY(-120%);
+    transform: translateY(-20%);
     opacity: 0;
     animation: slide-down $duration ease-in-out forwards;
     animation-delay: $delay;
@@ -84,12 +83,8 @@
 
 @keyframes slide-up {
     0% {
-        transform: translateY(20%);
+        transform: translateY(150%);
         opacity: 0;
-    }
-    80% {
-        transform: translateY(-20%);
-        opacity: 1;
     }
     100% {
         transform: translateY(0);
@@ -143,7 +138,7 @@
 
 @keyframes scale-in {
     from {
-        transform: scale(0);
+        transform: scale(0.8);
         opacity: 0;
     }
     to {
@@ -221,7 +216,21 @@
 
 @mixin animation-levitate ($duration) {
     transform: translateY(0);
-    animation: levitate $duration ease infinite;
+    animation: levitate $duration ease-in-out infinite alternate;
+}
+
+@keyframes levitate-around {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(4%, 5%);
+    }
+}
+
+@mixin animation-levitate-around ($duration) {
+    transform: translateY(0);
+    animation: levitate-around $duration ease-in-out infinite alternate;
 }
 
 // Moving along svg path (line, triangle, circle)

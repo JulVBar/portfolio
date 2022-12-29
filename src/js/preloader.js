@@ -13,6 +13,10 @@ function preloader() {
                 // document.querySelector('.algorithm').classList.add('start-animation');
 
                 document.querySelectorAll('[data-animation]').forEach(item=>item.classList.add('start-animation'));
+
+                if(document.querySelector('#briks')) {
+                    document.querySelectorAll('[data-animation]').forEach(item=>item.classList.add('start-animation'));
+                }
             }
         }, 200);
     };

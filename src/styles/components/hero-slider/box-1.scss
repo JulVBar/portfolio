@@ -25,11 +25,11 @@
         left: 1rem;
 
         div:nth-child(2) {
-            background: #FBF7A7;
+            background: $orange;
         }
 
         div:nth-child(3) {
-            background: #F0A0BC;
+            background: $green;
         }
 
         &-item {

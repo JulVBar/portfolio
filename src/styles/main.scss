@@ -5,25 +5,20 @@
 @import "animation";
 @import "fonts";
 
-@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-
+//components
 @import "components/header";
 @import "components/nav";
-@import "components/hero";
 @import "components/social-icons";
 @import "components/footer";
-@import "components/masonry";
-@import "components/categories";
-@import "components/switch-lang";
-@import "components/buttons";
-@import "components/project";
-@import "components/showcase";
-@import "components/mouse-parallax-title";
+@import "components/uikit";
 @import "components/burger";
 @import "components/preloader";
-@import "components/sidebar";
-
+//hero
+@import "components/hero/hero";
+@import "components/hero/mouse-parallax-title";
+//hero-slider
 @import "components/hero-slider/box-1";
 @import "components/hero-slider/box-2";
 @import "components/hero-slider/box-3";
@@ -41,14 +36,16 @@
 @import "components/hero-slider/circle-frame";
 @import "components/hero-slider/small-galery";
 @import "components/hero-slider/mixer";
-
-@import "components/swiper";
-
-
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
-
+//sections
+@import "components/sections/scope";
+//portfolio
+@import "components/portfolio/masonry";
+@import "components/portfolio/categories";
+@import "components/portfolio/sidebar";
+//project
+@import "components/project/project";
+@import "components/project/showcase";
+//project-pages
 @import "components/project-pages/makeupstore";
 @import "components/project-pages/books";
 @import "components/project-pages/interfaceapp";
@@ -56,3 +53,10 @@
 @import "components/project-pages/shoplist";
 @import "components/project-pages/saiding";
 @import "components/project-pages/creditbank";
+@import "components/project-pages/briks";
+
+//swiper
+@import "components/swiper";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';

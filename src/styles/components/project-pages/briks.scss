@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+$font-mont: 'Montserrat', sans-serif;
+$green: #C9FC4D;
+$black: #171A1F;
+
+#briks {
+    background: url('./images/projects/briks/blueBg.jpg') no-repeat;
+    background-size: cover;
+    font-family: $font-mont;
+    color: $black;
+    line-height: 130%;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+
+    h1, h2, h3, h4, h5 {
+        line-height: 130%;
+    }
+}
+.briks {
+    &-container {
+        max-width: 1180px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    &-content {
+        width: 100%;
+        display: flex;
+    }
+    &-header {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        background: transparent;
+        &-nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            ul {
+                margin-left: auto;
+                display: flex;
+                li {
+                    margin-left: 40px;
+                    padding: 10px 0;
+                    position: relative;
+                    cursor: pointer;
+                    a {
+                        color: $white;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 3px;
+                        z-index: 10;
+                        background: $green;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &-main {
+        flex: 1 1 auto;
+        &-left {
+            padding-top: 50px;
+            width: 365px;
+        }
+        &-right {
+            
+        }
+    }
+    &-title {
+        margin-bottom: 50px;
+        &-wrap {
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 50px;
+            color: $white;
+            font-weight: 700;
+            text-transform: uppercase;
+            transform: translateY(150%);
+            span {
+                color: $green;
+            }
+            &.start-animation {
+                animation: growup 0.7s linear forwards;
+                animation-delay: 2s;
+            }
+        }
+    }
+    &-replay {
+        overflow: hidden;
+    }
+    &-button {
+        width: 220px;
+        height: 70px;
+        background: $green;
+        color: $black;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+        transform: translateY(150%);
+        &-text {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &-arrow {
+            background: darken($green, 10%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 30px;
+            height: 100%;
+            border-radius: 0 20px 20px 0;
+        }
+        &:hover {
+            background: darken($green, 10%);
+        }
+        &.start-animation {
+            animation: growup 0.7s linear forwards;
+            animation-delay: 2s;
+        }
+    }
+    &-icons {
+        display: flex;
+        margin-bottom: 40px;
+        overflow: hidden;
+        svg {
+            fill: $white;
+            width: 25px;
+            height: 30px;
+            transition: all .2s ease-in-out;
+        }
+        &-item {
+            padding: 5px;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            transform: translateY(100%);
+            &:hover {
+                svg {
+                    fill: $green;
+                    transform: scale(1.1);
+                }
+            }
+            &.start-animation {
+                animation: growup 0.5s linear forwards;
+                animation-delay: 0.5s;
+            }
+        }
+        &-building {
+            
+            border-bottom: 3px solid $white;
+        }
+    }
+    &-tab {
+        display: flex;
+        &-item {
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+            width: 140px;
+            margin-right: 40px;
+            padding-top: 10px;
+            padding-bottom: 70px;
+            color: $white;
+            position: relative;
+            cursor: pointer;
+            transition: all .4s linear;
+            transform: translateY(150%);
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: $white;
+                width: 160px;
+                height: 0%;
+                z-index: -1;
+                border-radius: 20px 20px 0 0;
+                transition: all .3s linear;
+            }
+            &.active {
+                color: $black;
+                padding-left: 20px;
+            }
+            &.active::after {
+                height: 120%;
+            }
+            &:nth-child(1) {
+                &.start-animation {
+                    animation: growup 0.5s linear forwards;
+                    animation-delay: 0.5s;
+                }
+            }
+            &:nth-child(2) {
+                &.start-animation {
+                    animation: growup 0.5s linear forwards;
+                    animation-delay: 0.7s;
+                }
+            }
+            &:nth-child(3) {
+                &.start-animation {
+                    animation: growup 0.5s linear forwards;
+                    animation-delay: 0.9s;
+                }
+            }
+        }
+        &-header {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            pointer-events: none;
+        }
+        &-text {
+            font-weight: 400;
+            opacity: .9;
+            pointer-events: none;
+        }
+    }
+    &-lines {
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        left: 30%;
+        svg {
+            .briks-line-1 {
+                stroke-dasharray: 5500; // choose in browser to hide the hole svg path
+                stroke-dashoffset: 5500; // длина
+                &.start-animation {
+                    animation: draw-svg-line 3s linear forwards;
+                    animation-delay: 0.5s;
+                }
+            }
+            .briks-line-2 {
+                stroke-dasharray: 5500; // choose in browser to hide the hole svg path
+                stroke-dashoffset: 5500; // длина
+                &.start-animation {
+                    animation: draw-svg-line 3s linear forwards;
+                    animation-delay: 0.5s;
+                }
+            }
+            .briks-line-3 {
+                stroke-dasharray: 5500; // choose in browser to hide the hole svg path
+                stroke-dashoffset: 5500; // длина
+                &.start-animation {
+                    animation: draw-svg-line 3s linear forwards;
+                    animation-delay: 0.5s;
+                }
+            }
+        }
+    }
+    &-items {
+        position: fixed;
+        top: 20%;
+        left: 35%;
+        z-index: 5;
+        width: 850px;
+        height: 600px;
+        background: transparent;
+        pointer-events: none;
+    }
+    &-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        &-1 {
+            left: 3%;
+            top: 60%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(0 0, 100% 0, 100% 58%, 53% 79%, 0 55%);
+                img {
+                    transform: translateY(50%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: -3px;
+                left: 15px;
+                z-index: 5;
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+                img {
+                    transform: translateY(-50%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1s;
+                    }
+                }
+            }
+        }
+        &-2 {
+            left: 25%;
+            top: 25%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(100% 0, 100% 79%, 43% 90%, 0 80%, 0 0);
+                img {
+                    transform: translateY(75%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.2s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: -16px;
+                left: 15px;
+                z-index: 5;
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(40% 35%, 100% 3%, 100% 100%, 0% 100%, 0% 10%);
+                img {
+                    transform: translateY(-60%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.2s;
+                    }
+                }
+            }
+        }
+        &-3 {
+            left: 45%;
+            top: 0%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(100% 0, 100% 83%, 57% 93%, 0 81%, 0 0);
+                img {
+                    transform: translateY(77%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.4s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: -16px;
+                left: 15px;
+                z-index: 5;
+                // background: rgb(32, 188, 8);
+                clip-path: polygon(58% 53%, 100% 28%, 100% 100%, 0% 100%, 0% 20%);
+                img {
+                    transform: translateY(-60%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.4s;
+                    }
+                }
+            }
+        }
+        &-4 {
+            left: 20%;
+            top: 5%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(0 0, 100% 0, 100% 58%, 53% 79%, 0 55%);
+                img {
+                    transform: translateY(50%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.2s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: 3px;
+                left: 15px;
+                z-index: 5;
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+                img {
+                    transform: translateY(-50%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.2s;
+                    }
+                }
+            }
+        }
+        &-5 {
+            left: 35%;
+            top: 50%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(100% 0, 100% 80%, 43% 92%, 0 82%, 0 0);
+                img {
+                    transform: translateY(75%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.6s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: -16px;
+                left: 15px;
+                z-index: 5;
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(40% 35%, 100% 3%, 100% 100%, 0% 100%, 0% 10%);
+                img {
+                    transform: translateY(-60%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.6s;
+                    }
+                }
+            }
+        }
+        &-6 {
+            left: 50%;
+            top: 90%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(0 0, 100% 0, 100% 58%, 50% 85%, 0 58%);
+                img {
+                    transform: translateY(40%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.2s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: -3px;
+                left: 15px;
+                z-index: 5;
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+                img {
+                    transform: translateY(-40%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.2s;
+                    }
+                }
+            }
+        }
+        &-7 {
+            left: 65%;
+            top: 35%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(100% 0, 100% 84%, 57% 94%, 0 82%, 0 0);
+                img {
+                    transform: translateY(77%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: -16px;
+                left: 15px;
+                z-index: 5;
+                // background: rgb(32, 188, 8);
+                clip-path: polygon(58% 53%, 100% 28%, 100% 100%, 0% 100%, 0% 20%);
+                img {
+                    transform: translateY(-60%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1s;
+                    }
+                }
+            }
+        }
+        &-8 {
+            left: 75%;
+            top: 0%;
+            &-img {
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(100% 0, 100% 80%, 43% 92%, 0 82%, 0 0);
+                img {
+                    transform: translateY(75%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.6s;
+                    }
+                }
+            }
+            &-ref {
+                position: absolute;
+                bottom: -16px;
+                left: 15px;
+                z-index: 5;
+                // background: rgba(56, 8, 43, 0.642);
+                clip-path: polygon(40% 35%, 100% 3%, 100% 100%, 0% 100%, 0% 10%);
+                img {
+                    transform: translateY(-60%);
+                    &.start-animation {
+                        animation: growup 0.5s linear forwards;
+                        animation-delay: 1.6s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes growup {
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes draw-svg-line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+// @keyframes growup1 {
+//     0% {
+//         transform: translateY(75%);
+//         width: 0px;
+//     }
+//     50% {
+//         width: 205px;
+//         transform: translateY(75%);
+//     }
+//     100% {
+//         transform: translateY(0%);
+//         width: 205px;
+//     }
+// }
+
+

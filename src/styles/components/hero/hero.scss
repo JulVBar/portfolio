@@ -1,0 +1,141 @@
+.hero {
+    width: 100%;
+    margin-bottom: 5rem;
+    @include breakpoint($mobile) {
+        margin-bottom: 1rem;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        @include breakpoint($tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__footer {
+        position: relative;
+        top: -3.5rem;
+        @include breakpoint($mini-desk) {
+        }
+        @include breakpoint($tablet) {
+            display: flex;
+            justify-content: center;
+            top: 2rem;
+        }
+        @include breakpoint($mobile) {
+            top: -2rem;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @include breakpoint($tablet) {
+            align-items: center;
+        }
+        
+        &:not(:last-child) {
+            padding-right: 1rem;
+            @include breakpoint($tablet) {
+                padding-right: 0;
+            }
+        }
+
+        &--right {
+            width: 55%;
+            @include breakpoint($tablet) {
+                width: 100%;
+            }
+        }
+
+        &--left {
+            width: 45%;
+            padding-top: 1rem;
+            @include breakpoint($tablet) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $ff-main;
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 120%;
+        color: $text-primary;
+
+        &.start-animation {
+            @include animation-slide-up(1s, 0s);
+        }
+        @include breakpoint($mobile) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__subtitle {
+        font-family: $ff-main;
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 120%;
+
+        margin-bottom: 1.5rem;
+        color: $secondary;
+        background-image: $button-color-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include breakpoint($tablet) {
+            text-align: center;
+        }
+
+        &.start-animation {
+            @include animation-slide-up(1s, 0s);
+        }
+    }
+
+    &__text {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+
+        @include breakpoint($tablet) {
+            width: 70%;
+            text-align: center;
+        }
+
+        &.start-animation {
+            @include animation-fade-in(0.5s, 0.5s);
+        }
+    }
+
+    &__button {
+        &.start-animation {
+            @include animation-fade-in(0.7s, 0.7s);
+        }
+    }
+    
+    &Swiper {
+        &.start-animation {
+            @include animation-scale-in(0.7s, 0.5s);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -168,6 +168,22 @@ module.exports = {
                 removeComments: isProd 
             }
         }),
+        new HTMLWebpackPlugin({
+            filename: 'briks.html',
+            template: 'pages/briks.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'evac.html',
+            template: 'pages/evac.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [

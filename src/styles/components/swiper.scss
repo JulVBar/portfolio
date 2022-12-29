@@ -10,6 +10,11 @@
     justify-content: center;
     position: relative;
     margin-top: 2rem;
+    @include breakpoint($mobile) {
+        transform: scale(0.7);
+        margin-top: 0rem;
+        top: -3rem;
+    }
 }
 
 .swiper {
@@ -71,6 +76,10 @@
     height: 0.8rem !important;
     width: 0.8rem !important;
     background: $text-secodary-light !important;
+    @include breakpoint($mobile) {
+        position: relative;
+        top: -6rem;
+    }
 }
 
 .swiper-pagination-bullet-active {

@@ -11,7 +11,6 @@ function portfolioParallax() {
     function parallaxBlocks() {
         const blocks = document.querySelectorAll('.masonry__block');
         
-
         let scrollTop = window.scrollY;
 
         blocks .forEach(element => {
@@ -23,7 +22,7 @@ function portfolioParallax() {
                 let move = (coordinates.y - startPoint) * moveCoef;
                 element.style.transform = `translateY(${move}px)`;
             }
-        }); 
+        });
     }
 
 }

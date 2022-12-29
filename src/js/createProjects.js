@@ -41,16 +41,23 @@ function createProjects() {
 
     const projectsAll = [
         {
-            name: "Landing Page компании быстрых займов",
-            poster: "images/projects/creditbank/creditbank-poster.png",
-            category: "Landing Page",
+            name: "Лэндинг сервиса эвакуации автомобилей",
+            poster: "images/projects/evac/evac-poster.jpg",
+            category: "Лэндинг",
+            link: "evac.html",
+            filterId: "lp",
+        },
+        {
+            name: "Лэндинг компании быстрых займов",
+            poster: "images/projects/creditbank/creditbank-poster.jpg",
+            category: "Лэндинг",
             link: "creditbank.html",
             filterId: "lp",
         },
         {
             name: "Концепт автомобиля будущего Mercedes",
             poster: "images/projects/conceptcar/conceptcar-poster.jpg",
-            category: "Landing Page",
+            category: "Лэндинг",
             link: "conceptcar.html",
             filterId: "lp",
         },
@@ -92,14 +99,14 @@ function createProjects() {
         {
             name: "Лэндинг для студии дизайна ногтей Good Vin",
             poster: "images/projects/nailstudio/nail-poster.gif",
-            category: "Landing Page",
+            category: "Лэндинг",
             link: "nailstudio.html",
             filterId: "lp",
         },
         {
             name: "Многостраничный сайт для частной фирмы по эвакуации автомобилей",
             poster: "images/projects/evacuator/evacuator-poster.jpg",
-            category: "Landing Page",
+            category: "Лэндинг",
             link: "evacuator.html",
             filterId: "lp",
         },
@@ -120,14 +127,14 @@ function createProjects() {
         {
             name: "Макет для веб студии",
             poster: "images/projects/layout/roxlab-poster.jpg",
-            category: "Landing Page",
+            category: "Лэндинг",
             link: "roxlab.html",
             filterId: "lp",
         },
         {
             name: "Макет портфолио веб-дизайнера",
             poster: "images/projects/layout/portfolioblue-poster.jpg",
-            category: "Landing Page",
+            category: "Лэндинг",
             link: "portfolioblue.html",
             filterId: "lp",
         },

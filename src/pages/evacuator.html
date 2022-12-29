@@ -21,14 +21,18 @@
 <body class="project__page">
     <div class="preloader">
         <div id="loader">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <ul class="loader-wave list-reset">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
         <div class="preloader__sign">Frontend Developer Баранкова Юлия</div>
     </div>
@@ -40,7 +44,7 @@
     <header class="project__header">
         <div class="project__name">Многостраничный сайт для частной фирмы по эвакуации автомобилей</div>
         <div class="project__header__link__container">
-            <a href="nailstudio.html" class="project__header__link project__header__link--prev">
+            <a class="project__header__link project__header__link--prev" onclick="javascript:history.back(); return false;">
                 <svg><use xlink:href="images/icon/sprite.svg#arrow-left"></use></svg>
             </a>
             <a href="portfolio.html" class="project__header__link project__header__link--portfolio">
@@ -64,65 +68,6 @@
     </header>
 
     <main class="project evacuator">
-        <div class="project__connection">
-            <button class="project__button button__color" type="button">Заказать проект</button>
-            <div class="project__contacts">
-                <div class="social-icons social-icons--project">
-                    <ul class="social-icons__list list-reset">
-                        <li class="social-icons__item">
-                            <a href="https://api.whatsapp.com/send?phone=79216517678" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#whatsapp"></use></svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__item">
-                            <a href="https://t.me/JulVBar" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#telegram"></use></svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__item">
-                            <a href="mailto:barankovauv@gmail.com" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#mail"></use></svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="social-icons__list list-reset">
-                        <li class="social-icons__item">
-                            <a href="https://github.com/JulVBar" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#github"></use></svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__item">
-                            <a href="#" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#dribble"></use></svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__item">
-                            <a href="#" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#behance"></use></svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="social-icons__list list-reset">
-                        <li class="social-icons__item">
-                            <a href="https://www.linkedin.com/in/%D1%8E%D0%BB%D0%B8%D1%8F-%D0%B1%D0%B0%D1%80%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0-1b1873205/" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#linkedin"></use></svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__item">
-                            <a href="https://www.facebook.com/julia.zaytseva.71" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#facebook"></use></svg>
-                            </a>
-                        </li>
-                        <li class="social-icons__item">
-                            <a href="https://vk.com/id208033" class="social-icons__link" target="blank">
-                                <svg><use xlink:href="images/icon/sprite.svg#vk"></use></svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
         <section class="evacuator__hero">
             <div class="blobs blobs--left">
                 <div class="blob blob-one">
@@ -225,8 +170,69 @@
         <section>
     </main>
 
-    <footer>
-        <div class="project__footer">Frontend разработчик Баранкова Юлия Портфолио 2023</div>
+    <footer class="project__footer">
+        <div class="project__footer-container">
+            <div class="project__footer-title">Спасибо за просмотр!</div>
+            <div class="project__footer-nav">
+                <a href="home.html" class="project__footer-link">Главная</a>
+                <a href="portfolio.html" class="project__footer-link" >Портфолио</a>
+            </div>
+            <div class="social-icons project__footer-contacts">
+                <ul class="social-icons__list list-reset">
+                    <li class="social-icons__item">
+                        <a href="https://api.whatsapp.com/send?phone=79216517678" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#whatsapp"></use></svg>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://t.me/JulVBar" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#telegram"></use></svg>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="mailto:barankovauv@gmail.com" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#mail"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="social-icons__list list-reset">
+                    <li class="social-icons__item">
+                        <a href="https://github.com/JulVBar" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#github"></use></svg>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="#" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#dribble"></use></svg>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="#" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#behance"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="social-icons__list list-reset">
+                    <li class="social-icons__item">
+                        <a href="https://www.linkedin.com/in/%D1%8E%D0%BB%D0%B8%D1%8F-%D0%B1%D0%B0%D1%80%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D0%B0-1b1873205/" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#linkedin"></use></svg>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://www.facebook.com/julia.zaytseva.71" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#facebook"></use></svg>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://vk.com/id208033" class="social-icons__link" target="blank">
+                            <svg><use xlink:href="images/icon/sprite.svg#vk"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="project__footer-copyright">Web разработчик Баранкова Юлия</div>
+            <div class="project__footer-copyright">Портфолио 2023</div>
+        </div>
     </footer>
 </body>
 </html>

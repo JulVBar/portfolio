@@ -9,6 +9,7 @@ import categories from './js/categories';
 import preloader from './js/preloader';
 import contactsBtn from './js/contacts-btn';
 import btnToTop from './js/btn-to-top';
+import briks from './js/briks';
 
 import clock from './js/clock';
 import swiperSlider from './js/swiper';
@@ -21,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
     btnToTop();
 
     if(document.querySelector('.page--home')) {
-        titleParallax();
+        // titleParallax();
         clock();
         switchLang();
         swiperSlider();
@@ -35,6 +36,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
     if (document.querySelector('[data-aos-init]')) {
         AOS.init();
+    }
+    if (document.querySelector('#briks')) {
+        briks();
     }
     // if (document.querySelector('#creditbank')) {
     //     multiSwiper();
@@ -58,7 +62,8 @@ const hrevents = importAll(require.context('./images/projects/hrevents', false, 
 const shoplist = importAll(require.context('./images/projects/shoplist', false, /\.(png|jpe?g|svg|gif)$/));
 const layout = importAll(require.context('./images/projects/layout', false, /\.(png|jpe?g|svg|gif)$/));
 const creditbank = importAll(require.context('./images/projects/creditbank', false, /\.(png|jpe?g|svg|gif)$/));
-
+const briksImg = importAll(require.context('./images/projects/briks', false, /\.(png|jpe?g|svg|gif)$/));
+const evac = importAll(require.context('./images/projects/evac', false, /\.(png|jpe?g|svg|gif)$/));
 
 function importAll(r) {
     let images = {};

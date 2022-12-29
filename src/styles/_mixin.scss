@@ -22,12 +22,14 @@
 }
 
 @mixin button-rect {
-    min-width: 12rem;
-    // height: 3rem;
+    min-width: 13rem;
+    height: 3rem;
     margin: 0.3rem 0 2.5rem 0;
     padding: 0.7rem 1rem;
     color: $text-primary;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.2px;
     border-radius: 0.6rem;
 }
 
@@ -39,17 +41,13 @@
 
 @mixin button-color {
     color: $white;
-    font-weight: 500;
-    text-shadow: $text-shadow;
     background: $button-color-gradient;
     box-shadow: $color-shadow;
     transform: translateY(0);
 }
 
 @mixin button-color-hover {
-    background: linear-gradient(
-        89.59deg, $secondary-hover 0.35%, $secondary-dark-hover 99.65%);
-    color: darken($color: $white, $amount: 5%);
+    background: linear-gradient(89.59deg, darken($secondary, 10%) 0.35%, darken($secondary-dark, 10%) 99.65%);
 }
 
 @mixin button-circle {

@@ -2,15 +2,15 @@ $white:rgb(255, 255, 255);
 $black:rgb(0, 0, 0);
 
 //background
-$primary: #E3EDF7;
+$primary: #EBF3FA;
 $primary-dark: #DEEBF6;
-$secondary:#78C5D6;
-$secondary-opacity:#78c5d6c0;
-$secondary-dark:#4BBADD;
 
-$secondary-hover:#6cb2c2;
-$secondary-dark-hover:#46aece;
-$blue: #407BF1;
+$secondary:#78C5D6;
+$secondary-dark: #48B9DD;
+
+$blue: #BBD6EE;
+$green: #66C8A4;
+$orange: #FF8C68;
 
 
 //text
@@ -40,8 +40,7 @@ $line-gradient: linear-gradient(90deg, rgba(180, 192, 206, 0.48) -65.62%, rgba(1
 $text: 1rem;
 $small-text: 0.75rem;
 
-$ff-main: 'Montserrat', sans-serif;
-$ff-title: 'Gabriela', serif;
+$ff-main: 'Inter';
 
 //z-index
 $z-index-header:  1000;
@@ -51,7 +50,6 @@ $header-height: 50px;
 //media
 $middle-desk: 1440px;
 $mini-desk: 1200px;
-    $desktop: 1025px;
 $tablet: 1024px;
 $mini-tablet: 768px;
 $mobile: 576px;
