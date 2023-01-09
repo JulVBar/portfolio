@@ -1,38 +1,37 @@
 
 
 function createProjects() {
-    
     const masonry = document.querySelector('.masonry');
     masonry.innerHTML = '';
     class Project {
         constructor(
-                    name = "Coming Soon...",
-                    poster = "images/projects/comingsoon.jpg",
-                    category = "Coming Soon...",
+                    name,
+                    poster,
+                    category,
                     link,
-                    filterId
+                    filter
         )
         {
             this.name = name;
             this.poster = poster;
             this.category = category;
             this.link = link;
-            this.filterId = filterId;
+            this.filter = filter;
         }
 
         render() {
             const element = document.createElement('div');
             element.classList.add("masonry__wrapper");
             element.classList.add("fadeIn");
-            element.setAttribute("data-filter", this.filterId);
+            element.setAttribute("data-filter", this.filter);
 
             element.innerHTML = `
-            <a href=${this.link} class="masonry__block">
+            <a href="${this.link}" class="masonry__block">
                 <div class="masonry__text">${this.category}</div>
-                <div class="masonry__title">${this.name}</div>
                 <div class="masonry__image">
                     <img src=${this.poster} alt=${this.name}>
                 </div>
+                <div class="masonry__title">${this.name}</div>
             </a>
         `;
             masonry.append(element);
@@ -41,127 +40,67 @@ function createProjects() {
 
     const projectsAll = [
         {
+            name: "Лэндинг авторских букетов из сухоцветов",
+            poster: "images/projects/flowers/flowers-poster.png",
+            category: "Landing page",
+            link: "flowers.html",
+            filter: "lp",
+        },
+        {
             name: "Лэндинг сервиса эвакуации автомобилей",
-            poster: "images/projects/evac/evac-poster.jpg",
-            category: "Лэндинг",
-            link: "evac.html",
-            filterId: "lp",
+            poster: "images/projects/evacuator/evacuator-poster.png",
+            category: "Landing page",
+            link: "evacuator.html",
+            filter: "lp",
+        },
+        {
+            name: "Ip Zone Angular Application",
+            poster: "images/projects/ipzone/ipzone-poster.png",
+            category: "Веб-приложение Angular",
+            link: "ipzone.html",
+            filter: "webapp",
+        },
+        {
+            name: "Концепт автомобиля будущего Mercedes",
+            poster: "images/projects/conceptcar/conceptcar-poster.png",
+            category: "Landing page",
+            link: "conceptcar.html",
+            filter: "lp",
         },
         {
             name: "Лэндинг компании быстрых займов",
             poster: "images/projects/creditbank/creditbank-poster.jpg",
-            category: "Лэндинг",
+            category: "Landing page",
             link: "creditbank.html",
-            filterId: "lp",
-        },
-        {
-            name: "Концепт автомобиля будущего Mercedes",
-            poster: "images/projects/conceptcar/conceptcar-poster.jpg",
-            category: "Лэндинг",
-            link: "conceptcar.html",
-            filterId: "lp",
+            filter: "lp",
         },
         {
             name: "Интернет-магазин натуральной косметики",
             poster: "images/projects/makeupstore/makeupstore-poster.gif",
             category: "Интернет-магазин",
             link: "makeupstore.html",
-            filterId: "e-commerce",
+            filter: "multipage",
         },
-        {
-            name: "Ip-zone Angular Application",
-            poster: "images/projects/ipzone/ipzone-poster.jpg",
-            category: "Веб-приложение",
-            link: "ipzone.html",
-            filterId: "webapp",
-        },
+        
         {
             name: "Приложение для чтения книг на Vue",
-            poster: "images/projects/books/readbooks-poster.jpg",
-            category: "Веб-приложение",
+            poster: "images/projects/books/readbooks-poster.png",
+            category: "Веб-приложение Vue",
             link: "readbooks.html",
-            filterId: "webapp",
-        },
-        {
-            name: "HR Events React JS Application",
-            poster: "images/projects/hrevents/hrevents-poster.jpg",
-            category: "Веб-приложение",
-            link: "hrevents.html",
-            filterId: "webapp",
+            filter: "webapp",
         },
         {
             name: "Приложения для подбор тем интерфейса на React",
-            poster: "images/projects/interfaceapp/interfaceapp-poster.gif",
-            category: "Веб-приложение",
+            poster: "images/projects/interfaceapp/interfaceapp-poster.png",
+            category: "Веб-приложение React",
             link: "interfaceapp.html",
-            filterId: "webapp",
-        },
-        {
-            name: "Лэндинг для студии дизайна ногтей Good Vin",
-            poster: "images/projects/nailstudio/nail-poster.gif",
-            category: "Лэндинг",
-            link: "nailstudio.html",
-            filterId: "lp",
-        },
-        {
-            name: "Многостраничный сайт для частной фирмы по эвакуации автомобилей",
-            poster: "images/projects/evacuator/evacuator-poster.jpg",
-            category: "Лэндинг",
-            link: "evacuator.html",
-            filterId: "lp",
-        },
-        {
-            name: "Интернет-магазин по продаже фасадных материалов и услуг",
-            poster: "images/projects/saiding/saiding-poster.jpg",
-            category: "Интернет-магазин",
-            link: "saidingmarket.html",
-            filterId: "e-commerce",
-        },
-        {
-            name: "Shop List React JS Application",
-            poster: "images/projects/shoplist/shoplist-poster.jpg",
-            category: "Веб-приложение",
-            link: "shoplist.html",
-            filterId: "webapp",
-        },
-        {
-            name: "Макет для веб студии",
-            poster: "images/projects/layout/roxlab-poster.jpg",
-            category: "Лэндинг",
-            link: "roxlab.html",
-            filterId: "lp",
-        },
-        {
-            name: "Макет портфолио веб-дизайнера",
-            poster: "images/projects/layout/portfolioblue-poster.jpg",
-            category: "Лэндинг",
-            link: "portfolioblue.html",
-            filterId: "lp",
-        },
-        {
-            name: "Coming Soon...",
-            poster: "images/projects/layout/comingsoon.jpg",
-            category: "Coming Soon...",
-            filterId: "all",
+            filter: "webapp",
         },
     ];
 
 
-    projectsAll.forEach(({name, poster, category, link, filterId}) => {
-        new Project(name, poster, category, link, filterId).render();
+    projectsAll.forEach(({name, poster, category, link, filter}) => {
+        new Project(name, poster, category, link, filter).render();
     });
-
-    
-
-    // document.addEventListener('click', (e) => {
-    //     if (e.target.classList.contains('project__button')) {
-    //         projectContacts.classList.toggle('active');
-    //     }
-
-    //     if (e.target.classList.contains('project__contacts')) {
-    //         projectContacts.classList.remove('active');
-    //     }
-    // });
-
 }
 export default createProjects;

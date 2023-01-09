@@ -1,24 +1,42 @@
 .footer {
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 0.8rem;
+        color: $text-secodary-light;
+        text-align: center;
+        background:$primary;
+        padding: 2rem;
+        color: $text-secodary;
 
-    &--portfolio {
-        display: flex;
-        flex-direction: column;
-        background: transparent;
-        margin-top: 1.5rem;
-    }
-    
-
-    &__container {
-        @include breakpoint($tablet) {
+        &__container {
+            width: 100%;
             display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title {
+            font-size: 2rem;
+            padding-bottom: 2rem;
+        }
+        &__nav {
+            padding-bottom: 2rem;
+        }
+        &__link {
+            color: $text-secodary;
+            font-size: 1rem;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: all .2s linear;
+            &:hover {
+                color: $secondary;
+            }
+        }
+        &__contacts {
+            padding-bottom: 2rem;
         }
 
-        &--centred {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
+        &__copyright {
+            font-size: 1rem;
+            padding: 0.3rem;
         }
-    }
 }

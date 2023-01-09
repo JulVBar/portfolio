@@ -55,24 +55,6 @@ img {
     padding: 0;
 }
 
-.main {
-    flex: 1 1 auto;
-    &--homepage {
-        padding-top: 3rem;
-        @include breakpoint($tablet) {
-            padding-top: 1rem;
-        }
-    }
-    &--portfolio {
-        padding-left: 6rem;
-        padding-top: 6rem;
-
-        @include breakpoint($tablet) {
-            padding-left: 0;
-            padding-top: 1.5rem;
-        }
-    }
-}
 .page {
     overflow-x: hidden;
     display: flex;
@@ -94,21 +76,21 @@ img {
             background-position-x: center;
         }
     }
-    &--portfolio {
-        background-image: url("./images/cloud-bg.svg");
-        background-position: top;
-        background-repeat: repeat;
-    }
 }
-.portfolio__body {
-    background: $primary;
+
+.main {
+    flex: 1 1 auto;
+    &--homepage {
+        padding-top: 3rem;
+        @include breakpoint($tablet) {
+            padding-top: 1rem;
+        }
+    }
 }
 
 .header {
     flex: 0 0 6.25rem;
 }
-
-
 
 .container {
     margin: 0 auto;
@@ -118,13 +100,6 @@ img {
 
     @include breakpoint(400px) {
         padding: 0;
-    }
-
-    &--portfolio {
-        margin: 0;
-        padding: 0;
-        max-width: 100%;
-        height: 100%;
     }
 }
 

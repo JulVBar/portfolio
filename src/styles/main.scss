@@ -15,6 +15,7 @@
 @import "components/uikit";
 @import "components/burger";
 @import "components/preloader";
+@import "components/btn-to-top";
 //hero
 @import "components/hero/hero";
 @import "components/hero/mouse-parallax-title";
@@ -39,20 +40,14 @@
 //sections
 @import "components/sections/scope";
 //portfolio
+@import "components/portfolio/portfolio";
 @import "components/portfolio/masonry";
 @import "components/portfolio/categories";
-@import "components/portfolio/sidebar";
 //project
 @import "components/project/project";
 @import "components/project/showcase";
 //project-pages
 @import "components/project-pages/makeupstore";
-@import "components/project-pages/books";
-@import "components/project-pages/interfaceapp";
-@import "components/project-pages/evacuator";
-@import "components/project-pages/shoplist";
-@import "components/project-pages/saiding";
-@import "components/project-pages/creditbank";
 @import "components/project-pages/briks";
 
 //swiper

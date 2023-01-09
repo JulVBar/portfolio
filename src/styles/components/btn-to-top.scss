@@ -1,0 +1,35 @@
+.btn-to-top {
+    position: fixed;
+    z-index: 1000;
+    bottom: 2rem;
+    right: 1rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+    background: $primary-dark;
+    box-shadow: none;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, 0) rotate(45deg);
+    transition: all .2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(-50%, -10%) rotate(45deg);
+    }
+
+    svg {
+        width: 1rem;
+        height: 1rem;
+        fill: $secondary;
+        transform: rotate(45deg);
+    }
+    &.active {
+        display: flex;
+    }
+    
+}

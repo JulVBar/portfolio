@@ -1,5 +1,5 @@
 function btnToTop() {
-    const btnTop = document.querySelector('.project__btn-up');
+    const btnTop = document.querySelector('.btn-to-top');
 
     function btnToTopShow() {
         if (window.pageYOffset !== 0) {
