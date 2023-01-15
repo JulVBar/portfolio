@@ -1,4 +1,7 @@
 .nav {
+    @include breakpoint($mini-tablet) {
+        display: none;
+    }
     &__list {
         display: flex;
     }

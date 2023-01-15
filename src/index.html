@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,7 +20,7 @@
     <title>Iuliia Barankova Portfolio</title>
 </head>
 
-<body id="body">
+<body id="body" data-aos-init>
     <div class="preloader">
         <div id="loader">
             <ul class="loader-wave list-reset">
@@ -39,6 +39,10 @@
         <div class="preloader__sign">Frontend Developer Баранкова Юлия</div>
     </div>
 
+    <div class="btn-to-top">
+        <svg><use xlink:href="images/icon/sprite.svg#arrow-left"></use></svg>
+    </div>
+
     <div class="page page--home">
         <header class="header">
             <div class="header__container" data-animation >
@@ -46,10 +50,28 @@
                     <ul class="nav__list list-reset">
                         <li class="nav__item active"><a href="index.html" class="nav__link">Главная</a></li>
                         <li class="nav__item"><a href="portfolio.html" class="nav__link">Портфолио</a></li>
-                        <li class="nav__item"><a href="index.html" class="nav__link">Special</a></li>
+                        <li class="nav__item" data-scroll-item><a href="#service" class="nav__link" data-scroll-link>Услуги</a></li>
+                        <li class="nav__item" data-scroll-item><a href="#contact" class="nav__link" data-scroll-link>Контакты</a></li>
                         <!-- <li class="nav__item"><a href="https://julvbar.github.io/Iuliia-Barankova-resume/" class="nav__link" target="blank">Резюме</a></li> -->
                     </ul>
                 </nav>
+                <div class="burger-round">
+                    <input type="checkbox" class="burger-round__checkbox" id="navi-toggle">
+                    <label for="navi-toggle" class="burger-round__button">
+                        <span class="burger-round__icon">&nbsp;</span>
+                    </label>
+                    <div class="burger-round__background">&nbsp;</div>
+                    
+                    <nav class="burger-round__nav">
+                        <ul class="burger-round__list">
+                            <li class="burger-round__item"><a href="index.html" class="burger-round__link">Главная</a></li>
+                            <li class="burger-round__item"><a href="portfolio.html" class="burger-round__link">Портфолио</a></li>
+                            <li class="burger-round__item"><a href="#service" class="burger-round__link">Услуги</a></li>
+                            <li class="burger-round__item"><a href="#contact" class="burger-round__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    
+                </div>
             </div>
         </header>
 
@@ -321,12 +343,12 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="slider-btn-left">
+                                        <!-- <div class="slider-btn-left">
                                             <svg><use xlink:href="images/icon/sprite.svg#arrow-left"></use></svg>
                                         </div>
                                         <div class="slider-btn-right">
                                             <svg><use xlink:href="images/icon/sprite.svg#arrow-right"></use></svg>
-                                        </div>
+                                        </div> -->
                                         <div class="swiper-pagination"></div>
                                     </div>
                             </div>
@@ -335,11 +357,6 @@
                         <div class="hero__footer">
                             <div class="social-icons" data-animation >
                                 <ul class="social-icons__list list-reset">
-                                    <!-- <li class="social-icons__item">
-                                        <a href="tel:+79216517678" class="social-icons__link" target="blank">
-                                            <svg><use xlink:href="images/icon/sprite.svg#phone"></use></svg>
-                                        </a>
-                                    </li> -->
                                     <li class="social-icons__item">
                                         <a href="https://api.whatsapp.com/send?phone=79216517678" class="social-icons__link" target="blank">
                                             <svg><use xlink:href="images/icon/sprite.svg#whatsapp"></use></svg>
@@ -399,7 +416,7 @@
                 <section class="scope">
                     <div class="container">
                         <div class="scope__title section-title">
-                            <h2 >Что я делаю</h2>
+                            <h2>Что я делаю</h2>
                             <svg class="section-title-dots" width="127" height="131" viewBox="0 0 127 131" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle class="section-title-dots-blue" cx="33.2935" cy="78.4842" r="25" transform="rotate(25.3359 33.2935 78.4842)" fill="#78C5D6"/>
                                 <circle class="section-title-dots-orange" cx="91.1837" cy="97.595" r="7.5" transform="rotate(25.3359 91.1837 97.595)" fill="#66C8A4"/>
@@ -409,44 +426,444 @@
                         <ul class="scope__list list-reset">
                             <li class="scope__item">
                                 <div class="scope__item-header">
-                                    <div class="scope__item-icon">
+                                    <div class="scope__item-icon" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true">
                                         <svg><use xlink:href="images/icon/sprite.svg#palette"></use></svg>
                                     </div>
-                                    <h3 class="scope__item-title">Веб Дизайн</h3>
+                                    <h3 class="scope__item-title" data-aos="fade-right" data-aos-delay="100" data-aos-once="true">Веб Дизайн</h3>
                                 </div>
                                 <p class="scope__item-text">Весь цикл разработки дизайна: исследование, прототип, отрисовка макета, адаптив.</p>
                             </li>
                             <li class="scope__item">
                                 <div class="scope__item-header">
-                                    <div class="scope__item-icon">
+                                    <div class="scope__item-icon" data-aos="zoom-in" data-aos-delay="200" data-aos-once="true">
                                         <svg><use xlink:href="images/icon/sprite.svg#plugins"></use></svg>
                                     </div>
-                                    <h3 class="scope__item-title">Приложения</h3>
+                                    <h3 class="scope__item-title" data-aos="fade-right" data-aos-delay="200" data-aos-once="true">Приложения</h3>
                                 </div>
                                 <p class="scope__item-text">Веб-приложения (SPA) на фреймворках React, Vue, Angular разной сложности. Основной фреймворк - Angular.</p>
                             </li>
                             <li class="scope__item">
                                 <div class="scope__item-header">
-                                    <div class="scope__item-icon">
+                                    <div class="scope__item-icon" data-aos="zoom-in" data-aos-delay="300" data-aos-once="true">
                                         <svg><use xlink:href="images/icon/sprite.svg#web"></use></svg>
                                     </div>
-                                    <h3 class="scope__item-title">Сайты</h3>
+                                    <h3 class="scope__item-title" data-aos="fade-right" data-aos-delay="300" data-aos-once="true">Сайты</h3>
                                 </div>
                                 <p class="scope__item-text">Сайты любой сложности: от лэндингов до сложных многостраничных сайтов и интернет магазинов.</p>
                             </li>
                             <li class="scope__item">
                                 <div class="scope__item-header">
-                                    <div class="scope__item-icon">
+                                    <div class="scope__item-icon" data-aos="zoom-in" data-aos-delay="400" data-aos-once="true">
                                         <svg><use xlink:href="images/icon/sprite.svg#wordpress"></use></svg>
                                     </div>
-                                    <h3 class="scope__item-title">CMS</h3>
+                                    <h3 class="scope__item-title" data-aos="fade-right" data-aos-delay="400" data-aos-once="true">CMS</h3>
                                 </div>
                                 <p class="scope__item-text">Выполняю посадку на разные CMS, настройку контента, обучаю пользоваться системой клиента самостоятельно.</p>
                             </li>
                         </ul>
                     </div>
                 </section>
-            
+
+                <section class="newProjects">
+                    <div class="container">
+                        <div class="newProjects__title section-title">
+                            <h2>Новые проекты</h2>
+                            <svg class="section-title-dots" width="127" height="131" viewBox="0 0 127 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="section-title-dots-blue" cx="33.2935" cy="78.4842" r="25" transform="rotate(25.3359 33.2935 78.4842)" fill="#78C5D6"/>
+                                <circle class="section-title-dots-orange" cx="91.1837" cy="97.595" r="7.5" transform="rotate(25.3359 91.1837 97.595)" fill="#66C8A4"/>
+                                <circle class="section-title-dots-green" cx="75.2376" cy="31.958" r="15" transform="rotate(25.3359 75.2376 31.958)" fill="#FF8C68"/>
+                            </svg>
+                        </div>
+                        <div class="newProjects__content">
+                            <div class="newProjects__card">
+                                <div class="newProjects__card-image">
+                                    <img class="img-cover" src="images/projects/flowers/flowers-poster.png" alt="flowers landing page">
+                                </div>
+                                <div class="newProjects__card-body">
+                                    <div class="newProjects__card-name" data-aos="fade-up" data-aos-once="true">
+                                        <div class="newProjects__card-title">Лэндинг авторских букетов из сухоцветов</div>
+                                        <div class="newProjects__card-category">Landing page</div>
+                                    </div>
+                                    <a class="newProjects__card-link" href="flowers.html" data-aos="zoom-out" data-aos-delay="400" data-aos-once="true"><svg><use xlink:href="images/icon/sprite.svg#arrow45deg"></use></svg></a>
+                                </div>
+                            </div>
+                            <div class="newProjects__card">
+                                <div class="newProjects__card-image">
+                                    <img class="img-cover" src="images/projects/evacuator/evacuator-poster.png" alt="evacuator landing page">
+                                </div>
+                                <div class="newProjects__card-body">
+                                    <div class="newProjects__card-name" data-aos="fade-up" data-aos-once="true">
+                                        <div class="newProjects__card-title">Лэндинг сервиса эвакуации автомобилей</div>
+                                        <div class="newProjects__card-category">Landing page</div>
+                                    </div>
+                                    <a class="newProjects__card-link" href="evacuator.html" data-aos="zoom-out" data-aos-delay="400" data-aos-once="true"><svg><use xlink:href="images/icon/sprite.svg#arrow45deg"></use></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newProjects__button">
+                            <a href="portfolio.html" class="button__color">Смотреть все проекты</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="priceList" id="service">
+                    <div class="container">
+                        <div class="priceList__title section-title">
+                            <h2>Сайт под ключ</h2>
+                            <svg class="section-title-dots" width="127" height="131" viewBox="0 0 127 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="section-title-dots-blue" cx="33.2935" cy="78.4842" r="25" transform="rotate(25.3359 33.2935 78.4842)" fill="#78C5D6"/>
+                                <circle class="section-title-dots-orange" cx="91.1837" cy="97.595" r="7.5" transform="rotate(25.3359 91.1837 97.595)" fill="#66C8A4"/>
+                                <circle class="section-title-dots-green" cx="75.2376" cy="31.958" r="15" transform="rotate(25.3359 75.2376 31.958)" fill="#FF8C68"/>
+                            </svg>
+                        </div>
+                        <div class="priceList__content">
+                            <div class="priceList__image" data-aos="fade-left" data-aos-once="true">
+                                <img src="images/website.png" alt="website">
+                            </div>
+                            <div class="priceList__tabs tabs">
+                                <div class="tabs__menu">
+                                    <div class="tabs__menu-item active tabs-menu-premium">Премиум</div>
+                                    <div class="tabs__menu-item tabs-menu-standard"  data-aos="fade-in" data-aos-delay="250" data-aos-once="true">Стандарт</div>
+                                    <div class="tabs__menu-item tabs-menu-light"  data-aos="fade-in" data-aos-delay="500" data-aos-once="true">Лайт</div>
+                                </div>
+                                <div class="tabs__body tabs-premium">
+                                    <p class="tabs__text">Наиболее востребованное решение на рынке. Клиент полностью контролирует контент. Сайт разрабатывается кодом и сажается на CMS. Объединяет в себе индивидуальный дизайн, функциональность, SEO-friendly факторы и легкий доступ клиента к контенту, без возможности сломать или нарушить структуру.</p>
+                                    <p class="tabs__text">Особенности:</p>
+                                    <ul class="tabs__list list-reset">
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">индивидуальный дизайн</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">SEO-friendly разработка</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">проработка контента</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">посадка на CMS</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">инструкция по загрузке контента</p>
+                                        </li>
+                                    </ul>
+                                    <p class="tabs__text">Примеры сайтов: продающие лендинги, сайты-визитки, многостраничные сайты, корпоративные сайты, интернет-магазины, каталоги.</p>
+                                    <div class="tabs__catalog">
+                                        <ul class="tabs__list list-reset">
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">SEO-friendly</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">гибкая разработка</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">индивидуальный подход</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">управление контентом</p>
+                                            </li>
+                                        </ul>
+                                        <ul class="tabs__list list-reset">
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                    </svg>
+                                                <p class="tabs__list-string">длительная разработка</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tabs__body tabs-standard">
+                                    <p class="tabs__text">Стандартная разработка сайта более гибкая. Это сайты и single-page приложения написанные кодом. Подходит для клиентов, у которых нет необходимости изменять контент самостоятельно. Здесь можно воплотить любой индивидуальный дизайн, функциональность и красивую визуализацию. Максимально адаптирован под SEO продвижение.</p>
+                                    <p class="tabs__text">Особенности:</p>
+                                    
+                                    <ul class="tabs__list list-reset">
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">индивидуальный дизайн</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">SEO-friendly разработка</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">проработка контента</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">изменение контента по запросу</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">наполнение контентом</p>
+                                        </li>
+                                    </ul>
+                                    <p class="tabs__text">Примеры сайтов: продающие лэндинги, многостраничные сайты, корпоративные сайты, небольшие веб-приложения.</p>
+                                    <div class="tabs__catalog">
+                                        <ul class="tabs__list list-reset">
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">SEO-friendly</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">гибкая разработка</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">индивидуальный подход</p>
+                                            </li>
+                                        </ul>
+                                        <ul class="tabs__list list-reset">
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                    </svg>
+                                                <p class="tabs__list-string">замена контента самостоятельно</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tabs__body tabs-light">
+                                    <p class="tabs__text">Этот вариант самый бюджетный. Здесь не нужен оригинальный дизайн и особая разработка. У клиента нет необходимости постоянно менять контент. Пользователю не нужно находить сайт самостоятельно. Такой сайт я делаю на CMS на готовом шаблоне.</p>
+                                    <p class="tabs__text">Особенности:</p>
+                                    
+                                    <ul class="tabs__list list-reset">
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">подбор готового шаблона</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">дизайн по выбранному шаблону</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">инструкция по работе CMS</p>
+                                        </li>
+                                        <li class="tabs__list-item">
+                                            <svg class="tabs__list-icon"><use xlink:href="images/icon/sprite.svg#checkin"></use></svg>
+                                            <p class="tabs__list-string">наполнение контентом</p>
+                                        </li>
+                                    </ul>
+                                    <p class="tabs__text">Примеры сайтов: сайт визитка, резюме, инфо сайт, хранение информации, инструкции, каталог и прочее.</p>
+                                    <div class="tabs__catalog">
+                                        <ul class="tabs__list list-reset">
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">быстрая разработка</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">недорогая цена</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">отсутствие кода</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="9" y="17" width="14" height="1.5" rx="0.75" transform="rotate(-90 9 17)"/>
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                </svg>
+                                                <p class="tabs__list-string">визуальный конструктор</p>
+                                            </li>
+                                        </ul>
+                                        <ul class="tabs__list list-reset">
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                    </svg>
+                                                <p class="tabs__list-string">дизайн из стандартных блоков</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                    </svg>
+                                                <p class="tabs__list-string">ограниченный функционал</p>
+                                            </li>
+                                            <li class="tabs__list-item">
+                                                <svg class="tabs__list-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="3" y="9" width="14" height="1.5" rx="0.75"/>
+                                                    </svg>
+                                                <p class="tabs__list-string">редко появляется в поиске</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section class="workcircle">
+                    <div class="container">
+                        <div class="workcircle__title section-title">
+                            <h2>Этапы работы</h2>
+                            <svg class="section-title-dots" width="127" height="131" viewBox="0 0 127 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="section-title-dots-blue" cx="33.2935" cy="78.4842" r="25" transform="rotate(25.3359 33.2935 78.4842)" fill="#78C5D6"/>
+                                <circle class="section-title-dots-orange" cx="91.1837" cy="97.595" r="7.5" transform="rotate(25.3359 91.1837 97.595)" fill="#66C8A4"/>
+                                <circle class="section-title-dots-green" cx="75.2376" cy="31.958" r="15" transform="rotate(25.3359 75.2376 31.958)" fill="#FF8C68"/>
+                            </svg>
+                        </div>
+                        <div class="workcircle__container">
+                            <div class="workcircle__container__bg"></div>
+                            <div class="workcircle__inner">
+                                <div class="step step-1">
+                                    <div class="step__content">
+                                        <div class="step__icon">
+                                            <img src="images/icon/list.svg" alt="">
+                                        </div>
+                                        <div class="step__title" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
+                                            <span>01.</span>
+                                            <h4>Бесплатная консультация</h4>
+                                        </div>
+                                        <div class="step__text" data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
+                                            Обсуждение проекта и ожиданий, целей и задач. Я предложу возможные пути реализации. Дам рекомендации, что нужно сделать для подготовки к разработке проекта.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step step-2">
+                                    <div class="step__content">
+                                        <div class="step__icon">
+                                            <img src="images/icon/analytics.svg" alt="">
+                                        </div>
+                                        <div class="step__title" data-aos="fade-up" data-aos-delay="400" data-aos-once="true">
+                                            <span>02.</span>
+                                            <h4>Аналитика</h4>
+                                        </div>
+                                        <div class="step__text" data-aos="fade-up" data-aos-delay="500" data-aos-once="true">
+                                            Анализ конкурентов и аудитории продукта. Сбор информации для SEO. Создание или обновление уже имеющегося у клиента контента. Определение состава сайта и блоков. Разработка технического задания.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step step-3">
+                                    <div class="step__content">
+                                        <div class="step__icon">
+                                            <img src="images/icon/design.svg" alt="">
+                                        </div>
+                                        <div class="step__title" data-aos="fade-up" data-aos-delay="600" data-aos-once="true">
+                                            <span>03.</span>
+                                            <h4>Прототип и дизайн</h4>
+                                        </div>
+                                        <div class="step__text" data-aos="fade-up" data-aos-delay="700" data-aos-once="true">
+                                            Создание прототипа сайта. Выбор концепции дизайна, проработка контента. Создание дизайна сайта и адаптивов под все устройства.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step step-4">
+                                    <div class="step__content">
+                                        <div class="step__icon">
+                                            <img src="images/icon/code.svg" alt="">
+                                        </div>
+                                        <div class="step__title">
+                                            <span>04.</span>
+                                            <h4>Разработка сайта</h4>
+                                        </div>
+                                        <div class="step__text">
+                                            Разработка сайта на HTML или визуальном конструкторе. Подключение скриптов, анимаций, адаптация под устройства.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step step-5">
+                                    <div class="step__content">
+                                        <div class="step__icon">
+                                            <img src="images/icon/wordpress.svg" alt="">
+                                        </div>
+                                        <div class="step__title">
+                                            <span>05.</span>
+                                            <h4>Посадка на CMS</h4>
+                                        </div>
+                                        <div class="step__text">
+                                            Посадка сайта на CMS, отладка верстки и технических процессов. Наполнение контентом и SEO-настройки. Подключение аналитики.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step step-6">
+                                    
+                                    <div class="step__content">
+                                        <div class="step__icon">
+                                            <img src="images/icon/design.svg" alt="">
+                                        </div>
+                                        <div class="step__title">
+                                            <span>06.</span>
+                                            <h4>Запуск и поддержка</h4>
+                                        </div>
+                                        <div class="step__text">
+                                            Оформление хостинга и домена — уникального адреса сайта. Перенос сайта на хостинг. Подключение аналитики. Тестирование.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="workcircle-button-next">
+                                <svg><use xlink:href="images/icon/sprite.svg#arrow-long"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact" id="contact">
+                    <div class="container">
+                        <div class="contact__title section-title">
+                            <h2>Контакты</h2>
+                            <svg class="section-title-dots" width="127" height="131" viewBox="0 0 127 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="section-title-dots-blue" cx="33.2935" cy="78.4842" r="25" transform="rotate(25.3359 33.2935 78.4842)" fill="#78C5D6"/>
+                                <circle class="section-title-dots-orange" cx="91.1837" cy="97.595" r="7.5" transform="rotate(25.3359 91.1837 97.595)" fill="#66C8A4"/>
+                                <circle class="section-title-dots-green" cx="75.2376" cy="31.958" r="15" transform="rotate(25.3359 75.2376 31.958)" fill="#FF8C68"/>
+                            </svg>
+                        </div>
+                        <div class="contact__inner">
+                            <div class="contact__list">
+                                <a class="contact__link contact__link--whatsapp" href="https://api.whatsapp.com/send?phone=79216517678" target="blank" data-aos="fade-up" data-aos-once="true">Whatsapp</a>
+                                <a class="contact__link contact__link--telegram" href="https://api.whatsapp.com/send?phone=79216517678" target="blank" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">Telegram</a>
+                            </div>
+                            <div class="contact__list">
+                                <a class="contact__link" href="https://www.behance.net/04de5c99" target="blank" data-aos="fade-up" data-aos-once="true">Behance</a>
+                                <a class="contact__link" href="mailto:barankovauv@gmail.com" target="blank" data-aos="fade-up" data-aos-delay="200" data-aos-once="true">barankovauv@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         </main> <!--main-->
 
         <footer class="footer">
@@ -481,7 +898,7 @@
                             </a>
                         </li>
                         <li class="social-icons__item">
-                            <a href="#" class="social-icons__link" target="blank">
+                            <a href="https://www.behance.net/04de5c99" class="social-icons__link" target="blank">
                                 <svg><use xlink:href="images/icon/sprite.svg#behance"></use></svg>
                             </a>
                         </li>
@@ -509,9 +926,9 @@
             </div>
         </footer>
     </div>
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
-    </script> -->
+    AOS.init();
+    </script>
 </body>
 </html>

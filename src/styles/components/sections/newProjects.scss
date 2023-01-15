@@ -1,0 +1,85 @@
+.newProjects {
+    width: 100%;
+    padding: 7rem 0;
+    background-image: url("./images/newProjects-bg.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @include breakpoint($tablet) {
+        background: $primary-dark;
+        text-align: center;
+    }
+    @include breakpoint($mobile) {
+        padding: 3rem 0;
+    }
+    &__content {
+        display: flex;
+        width: 100%;
+        margin-bottom: 6rem;
+        @include breakpoint($mini-tablet) {
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
+    }
+    &__card {
+        width: 50%;
+        padding: 0 2rem;
+        @include breakpoint($mini-tablet) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        &-image {
+            border-radius: 1.5rem;
+            margin-bottom: 2rem;
+            img {
+                border-radius: 1.5rem;
+            }
+        }
+        &-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-name {
+            text-align: left;
+            width: 80%;
+            
+        }
+        &-title {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $text-primary;
+        }
+        &-category {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $text-secodary;
+        }
+        
+        &-link {
+            width: 3rem;
+            height: 3rem;
+            background: $primary;
+            border-radius: 50%;
+            box-shadow: $out-shadow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .2s ease;
+            svg {
+                fill: $secondary;
+                width: 1rem;
+                height: 1.5rem;
+            }
+            &:hover {
+                box-shadow: $in-out-shadow;
+            }
+        }
+    }
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

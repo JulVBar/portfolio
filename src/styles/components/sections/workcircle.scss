@@ -1,0 +1,184 @@
+.workcircle {
+    width: 100%;
+    padding: 7rem 0;
+    background: $primary;
+    @include breakpoint($tablet) {
+        text-align: center;
+    }
+    @include breakpoint($mobile) {
+        padding: 3rem 0;
+    }
+    &__container {
+        overflow: hidden;
+        max-width: 1200px;
+        height: 600px;
+        position: relative;
+        &__bg {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 1200px;
+            height: 600px;
+            background: url('images/workcircleline.svg') no-repeat;
+        }
+    }
+    &__inner {
+        display: flex;
+        width: 2400px;
+    }
+    &-button-next {
+        position: absolute;
+        left: 10px;
+        bottom: 30%;
+        cursor: pointer;
+        svg {
+            fill: $text-secodary;
+            width: 150px;
+            height: 60px;
+        }
+    }
+}
+
+
+.step {
+    padding-top: 10px;
+    width: 25rem;
+    height: 350px;
+    position: absolute;
+    @include breakpoint($tablet) {
+        text-align: left;
+    }
+    &-out {
+        opacity: 0;
+        transform: translate(-150%, 0%);
+    }
+    &-1 {
+        transform: translate(0%, 0%);
+    }
+    &-2{
+        transform: translate(100%, 55%);
+    }
+    &-3 {
+        transform: translate(200%, 40%);
+        
+    }
+    &-4 {
+        transform: translate(300%, 0%);
+        opacity: 1;
+    }
+    &-5 {
+        transform: translate(400%, 55%);
+        opacity: 0;
+    }
+    &-6 {
+        transform: translate(500%, 40%);
+        opacity: 0;
+    }
+    &__content {
+        position: absolute;
+        padding-left: 10px;
+        width: 300px;
+    }
+    &__icon {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: $radial-gradient-plate;
+        box-shadow: $out-shadow;
+        margin-bottom: 30px;
+    }
+    &__title {
+        display: flex;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        span {
+            margin-right: 0.5rem;
+            font-weight: 600;
+            color: $secondary;
+        }
+        h4 {
+            color: $text-primary;
+        }
+    }
+    &__text {
+        font-size: 1rem;
+        color: $text-secodary;
+        font-weight: 400;
+    }
+}
+
+
+
+.anim4-3 {
+    animation: move-from-4-to-3 1s linear forwards;
+}
+@keyframes move-from-4-to-3 {
+    0% {
+        transform: translate(300%, 0%);
+    }
+    40% {
+        transform: translate(280%, 5%);
+    }
+    60% {
+        transform: translate(250%, 10%);
+    }
+    100% {
+        transform: translate(200%, 40%);
+    }
+}
+
+
+.anim3-2 {
+    animation: move-from-3-to-2 1s linear forwards;
+}
+@keyframes move-from-3-to-2 {
+    0% {
+        transform: translate(200%, 40%);
+    }
+    40% {
+        transform: translate(150%, 70%);
+    }
+    60% {
+        transform: translate(130%, 70%);
+    }
+    100% {
+        transform: translate(100%, 55%);
+    }
+}
+
+
+.anim2-1 {
+    animation: move-from-2-to-1 1s linear forwards;
+}
+@keyframes move-from-2-to-1 {
+    0% {
+        transform: translate(100%, 55%);
+    }
+    30% {
+        transform: translate(60%, 20%);
+    }
+    60% {
+        transform: translate(30%, 10%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+.anim-out {
+    animation: move-out 1s linear forwards;
+}
+@keyframes move-out {
+    0% {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-150%, 0%);
+        opacity: 0;
+    }
+}

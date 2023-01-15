@@ -8,6 +8,9 @@ import titleParallax from './js/paralax-title';
 import categories from './js/categories';
 import preloader from './js/preloader';
 import btnToTop from './js/btn-to-top';
+import nav from './js/nav';
+import priceTabs from './js/priceTabs';
+import worckcircle from './js/worckcircle';
 import briks from './js/briks';
 
 import clock from './js/clock';
@@ -25,6 +28,10 @@ window.addEventListener('DOMContentLoaded', function() {
         switchLang();
         swiperSlider();
         iconsSwitch();
+        nav();
+        priceTabs();
+        worckcircle();
+        AOS.init();
     }
     if (document.querySelector('.portfolio')) {
         portfolioParallax();

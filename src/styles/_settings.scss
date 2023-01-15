@@ -85,6 +85,9 @@ img {
         @include breakpoint($tablet) {
             padding-top: 1rem;
         }
+        @include breakpoint($mobile) {
+            padding-top: 50px;
+        }
     }
 }
 
